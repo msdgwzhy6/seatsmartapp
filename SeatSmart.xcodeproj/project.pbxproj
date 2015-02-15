@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22281A90FA14003C9DFE /* AppDelegate.swift */; };
 		19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */; };
-		19CE222E1A90FA15003C9DFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE222D1A90FA15003C9DFE /* ViewController.swift */; };
 		19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CE222F1A90FA15003C9DFE /* Main.storyboard */; };
 		19CE22331A90FA15003C9DFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CE22321A90FA15003C9DFE /* Images.xcassets */; };
 		19CE22361A90FA15003C9DFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19CE22341A90FA15003C9DFE /* LaunchScreen.xib */; };
 		19CE22421A90FA15003C9DFE /* SeatSmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22411A90FA15003C9DFE /* SeatSmartTests.swift */; };
+		19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE224B1A90FF67003C9DFE /* EventsViewController.swift */; };
+		19CE22501A90FFCC003C9DFE /* EventDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */; };
+		19CE22531A91143B003C9DFE /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22521A91143B003C9DFE /* EventItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +33,15 @@
 		19CE22271A90FA14003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CE22281A90FA14003C9DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19CE222B1A90FA15003C9DFE /* SeatSmart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SeatSmart.xcdatamodel; sourceTree = "<group>"; };
-		19CE222D1A90FA15003C9DFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19CE22301A90FA15003C9DFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19CE22321A90FA15003C9DFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		19CE22351A90FA15003C9DFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		19CE223B1A90FA15003C9DFE /* SeatSmartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeatSmartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CE22401A90FA15003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CE22411A90FA15003C9DFE /* SeatSmartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSmartTests.swift; sourceTree = "<group>"; };
+		19CE224B1A90FF67003C9DFE /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Controllers/EventsViewController.swift; sourceTree = "<group>"; };
+		19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailsController.swift; path = Controllers/EventDetailsController.swift; sourceTree = "<group>"; };
+		19CE22521A91143B003C9DFE /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventItem.swift; path = Models/EventItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +83,13 @@
 		19CE22251A90FA14003C9DFE /* SeatSmart */ = {
 			isa = PBXGroup;
 			children = (
+				19CE22511A911403003C9DFE /* Models */,
+				19CE224E1A90FF94003C9DFE /* Data */,
+				19CE224D1A90FF72003C9DFE /* Controllers */,
 				19CE22281A90FA14003C9DFE /* AppDelegate.swift */,
-				19CE222D1A90FA15003C9DFE /* ViewController.swift */,
 				19CE222F1A90FA15003C9DFE /* Main.storyboard */,
 				19CE22321A90FA15003C9DFE /* Images.xcassets */,
 				19CE22341A90FA15003C9DFE /* LaunchScreen.xib */,
-				19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */,
 				19CE22261A90FA14003C9DFE /* Supporting Files */,
 			);
 			path = SeatSmart;
@@ -113,6 +118,31 @@
 				19CE22401A90FA15003C9DFE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19CE224D1A90FF72003C9DFE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */,
+				19CE224B1A90FF67003C9DFE /* EventsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		19CE224E1A90FF94003C9DFE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		19CE22511A911403003C9DFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19CE22521A91143B003C9DFE /* EventItem.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19CE222E1A90FA15003C9DFE /* ViewController.swift in Sources */,
+				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
+				19CE22531A91143B003C9DFE /* EventItem.swift in Sources */,
 				19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */,
+				19CE22501A90FFCC003C9DFE /* EventDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
