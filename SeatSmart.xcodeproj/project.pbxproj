@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22281A90FA14003C9DFE /* AppDelegate.swift */; };
+		19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */; };
+		19CE222E1A90FA15003C9DFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE222D1A90FA15003C9DFE /* ViewController.swift */; };
+		19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CE222F1A90FA15003C9DFE /* Main.storyboard */; };
+		19CE22331A90FA15003C9DFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CE22321A90FA15003C9DFE /* Images.xcassets */; };
+		19CE22361A90FA15003C9DFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19CE22341A90FA15003C9DFE /* LaunchScreen.xib */; };
+		19CE22421A90FA15003C9DFE /* SeatSmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22411A90FA15003C9DFE /* SeatSmartTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19CE223C1A90FA15003C9DFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19CE221B1A90FA14003C9DFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19CE22221A90FA14003C9DFE;
+			remoteInfo = SeatSmart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19CE22231A90FA14003C9DFE /* SeatSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CE22271A90FA14003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19CE22281A90FA14003C9DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19CE222B1A90FA15003C9DFE /* SeatSmart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SeatSmart.xcdatamodel; sourceTree = "<group>"; };
+		19CE222D1A90FA15003C9DFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19CE22301A90FA15003C9DFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19CE22321A90FA15003C9DFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		19CE22351A90FA15003C9DFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		19CE223B1A90FA15003C9DFE /* SeatSmartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeatSmartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CE22401A90FA15003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19CE22411A90FA15003C9DFE /* SeatSmartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSmartTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19CE22201A90FA14003C9DFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CE22381A90FA15003C9DFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19CE221A1A90FA14003C9DFE = {
+			isa = PBXGroup;
+			children = (
+				19CE22251A90FA14003C9DFE /* SeatSmart */,
+				19CE223E1A90FA15003C9DFE /* SeatSmartTests */,
+				19CE22241A90FA14003C9DFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19CE22241A90FA14003C9DFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19CE22231A90FA14003C9DFE /* SeatSmart.app */,
+				19CE223B1A90FA15003C9DFE /* SeatSmartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19CE22251A90FA14003C9DFE /* SeatSmart */ = {
+			isa = PBXGroup;
+			children = (
+				19CE22281A90FA14003C9DFE /* AppDelegate.swift */,
+				19CE222D1A90FA15003C9DFE /* ViewController.swift */,
+				19CE222F1A90FA15003C9DFE /* Main.storyboard */,
+				19CE22321A90FA15003C9DFE /* Images.xcassets */,
+				19CE22341A90FA15003C9DFE /* LaunchScreen.xib */,
+				19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */,
+				19CE22261A90FA14003C9DFE /* Supporting Files */,
+			);
+			path = SeatSmart;
+			sourceTree = "<group>";
+		};
+		19CE22261A90FA14003C9DFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19CE22271A90FA14003C9DFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19CE223E1A90FA15003C9DFE /* SeatSmartTests */ = {
+			isa = PBXGroup;
+			children = (
+				19CE22411A90FA15003C9DFE /* SeatSmartTests.swift */,
+				19CE223F1A90FA15003C9DFE /* Supporting Files */,
+			);
+			path = SeatSmartTests;
+			sourceTree = "<group>";
+		};
+		19CE223F1A90FA15003C9DFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19CE22401A90FA15003C9DFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19CE22221A90FA14003C9DFE /* SeatSmart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CE22451A90FA15003C9DFE /* Build configuration list for PBXNativeTarget "SeatSmart" */;
+			buildPhases = (
+				19CE221F1A90FA14003C9DFE /* Sources */,
+				19CE22201A90FA14003C9DFE /* Frameworks */,
+				19CE22211A90FA14003C9DFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeatSmart;
+			productName = SeatSmart;
+			productReference = 19CE22231A90FA14003C9DFE /* SeatSmart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19CE223A1A90FA15003C9DFE /* SeatSmartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CE22481A90FA15003C9DFE /* Build configuration list for PBXNativeTarget "SeatSmartTests" */;
+			buildPhases = (
+				19CE22371A90FA15003C9DFE /* Sources */,
+				19CE22381A90FA15003C9DFE /* Frameworks */,
+				19CE22391A90FA15003C9DFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19CE223D1A90FA15003C9DFE /* PBXTargetDependency */,
+			);
+			name = SeatSmartTests;
+			productName = SeatSmartTests;
+			productReference = 19CE223B1A90FA15003C9DFE /* SeatSmartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19CE221B1A90FA14003C9DFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = SeatSmart;
+				TargetAttributes = {
+					19CE22221A90FA14003C9DFE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					19CE223A1A90FA15003C9DFE = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 19CE22221A90FA14003C9DFE;
+					};
+				};
+			};
+			buildConfigurationList = 19CE221E1A90FA14003C9DFE /* Build configuration list for PBXProject "SeatSmart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19CE221A1A90FA14003C9DFE;
+			productRefGroup = 19CE22241A90FA14003C9DFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19CE22221A90FA14003C9DFE /* SeatSmart */,
+				19CE223A1A90FA15003C9DFE /* SeatSmartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19CE22211A90FA14003C9DFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */,
+				19CE22361A90FA15003C9DFE /* LaunchScreen.xib in Resources */,
+				19CE22331A90FA15003C9DFE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CE22391A90FA15003C9DFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19CE221F1A90FA14003C9DFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CE222E1A90FA15003C9DFE /* ViewController.swift in Sources */,
+				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
+				19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CE22371A90FA15003C9DFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CE22421A90FA15003C9DFE /* SeatSmartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19CE223D1A90FA15003C9DFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19CE22221A90FA14003C9DFE /* SeatSmart */;
+			targetProxy = 19CE223C1A90FA15003C9DFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19CE222F1A90FA15003C9DFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19CE22301A90FA15003C9DFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19CE22341A90FA15003C9DFE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19CE22351A90FA15003C9DFE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19CE22431A90FA15003C9DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19CE22441A90FA15003C9DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19CE22461A90FA15003C9DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SeatSmart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		19CE22471A90FA15003C9DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SeatSmart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		19CE22491A90FA15003C9DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SeatSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeatSmart.app/SeatSmart";
+			};
+			name = Debug;
+		};
+		19CE224A1A90FA15003C9DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SeatSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeatSmart.app/SeatSmart";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19CE221E1A90FA14003C9DFE /* Build configuration list for PBXProject "SeatSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CE22431A90FA15003C9DFE /* Debug */,
+				19CE22441A90FA15003C9DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19CE22451A90FA15003C9DFE /* Build configuration list for PBXNativeTarget "SeatSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CE22461A90FA15003C9DFE /* Debug */,
+				19CE22471A90FA15003C9DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		19CE22481A90FA15003C9DFE /* Build configuration list for PBXNativeTarget "SeatSmartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CE22491A90FA15003C9DFE /* Debug */,
+				19CE224A1A90FA15003C9DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				19CE222B1A90FA15003C9DFE /* SeatSmart.xcdatamodel */,
+			);
+			currentVersion = 19CE222B1A90FA15003C9DFE /* SeatSmart.xcdatamodel */;
+			path = SeatSmart.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 19CE221B1A90FA14003C9DFE /* Project object */;
+}
