@@ -8,23 +8,30 @@
 
 import UIKit
 
+var selectedEventRow:Int = 0
+var eventItems = [EventItem]()
+
 class EventsViewController: UITableViewController {
     
-    var eventItems = [EventItem]()
-    
     func loadInitialData() {
-        var item1 = EventItem(fromString: "Event 1")
+        var item1 = EventItem(fromString: "Event 1: Some Concert")
         item1.zip = "78209"
         item1.date = "2/15/2015"
         item1.basePrice = "25.00"
         
-        var item2 = EventItem(fromString: "Event 2")
+        var item2 = EventItem(fromString: "Event 2: Some Basketball Game")
         item2.zip = "78209"
         item2.date = "2/15/2015"
         item2.basePrice = "25.00"
         
-        self.eventItems.append(item1)
-        self.eventItems.append(item2)
+        var item3 = EventItem(fromString: "Event 3: Some Broadway Show")
+        item2.zip = "78209"
+        item2.date = "2/15/2015"
+        item2.basePrice = "25.00"
+        
+        eventItems.append(item1)
+        eventItems.append(item2)
+        eventItems.append(item3)
     }
 
     override func viewDidLoad() {
@@ -44,22 +51,23 @@ class EventsViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.eventItems.count
+        return eventItems.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventItemPrototypeCell", forIndexPath: indexPath) as UITableViewCell
 
-        let eventItem = self.eventItems[indexPath.row]
+        let eventItem = eventItems[indexPath.row]
         cell.textLabel?.text = eventItem.title
 
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         
-
+        selectedEventRow = indexPath.row
+        
+        return indexPath
     }
 
     /*
