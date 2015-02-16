@@ -11,7 +11,13 @@ import UIKit
 var selectedEventRow:Int = 0
 var eventItems = [EventItem]()
 
+
+
 class EventsViewController: UITableViewController {
+    
+    
+
+    
     
     func loadInitialData() {
         var item1 = EventItem(fromString: "Event 1: Some Concert")
@@ -32,11 +38,32 @@ class EventsViewController: UITableViewController {
         eventItems.append(item1)
         eventItems.append(item2)
         eventItems.append(item3)
+        
+        println(eventItems)
+        
+        
+//        let url = NSURL(string: "http://outsidervc.com/seatsmart/test_events_data.json")
+//        let urlRequest = NSURLRequest(URL: url!)
+//        
+//        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
+//            response, data, error in
+//            
+//            if error != nil {
+//                println("there was an error")
+//            }
+//            
+//            let eventItems = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
+//            
+//        })
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadInitialData()
+        
+
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,24 +9,25 @@
 import UIKit
 
 class EventItem: NSObject {
-    var title: String;
-    var zip: String;
-    var date: String;
-    var basePrice: String;
-    var latidude: String;
-    var longitude: String;
+
+    var basePrice: String
+    var date:      String
+    var latidude:  String
+    var longitude: String
+    var title:     String
+    var zip:       String
     
     convenience override init() {
         self.init(fromString: "Event Title")
     }
     
     init(fromString title: NSString) {
-        self.title = title
-        self.zip = ""
-        self.date = ""
         self.basePrice = "0.00"
-        self.latidude = "0.0"
+        self.date      = ""
+        self.latidude  = "0.0"
         self.longitude = "0.0"
+        self.title     = title
+        self.zip       = ""
         super.init()
     }
 }
