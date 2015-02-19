@@ -153,7 +153,7 @@
 		19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE224B1A90FF67003C9DFE /* EventsViewController.swift */; };
 		19CE22501A90FFCC003C9DFE /* EventDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */; };
 		19CE22531A91143B003C9DFE /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22521A91143B003C9DFE /* EventItem.swift */; };
-		C51016081A92A577003D0D2D /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51016071A92A577003D0D2D /* Events.swift */; };
+		C5BFA54B1A92B0C900F3249A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFA54A1A92B0C900F3249A /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -317,7 +317,7 @@
 		19CE224B1A90FF67003C9DFE /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Controllers/EventsViewController.swift; sourceTree = "<group>"; };
 		19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailsController.swift; path = Controllers/EventDetailsController.swift; sourceTree = "<group>"; };
 		19CE22521A91143B003C9DFE /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventItem.swift; path = Models/EventItem.swift; sourceTree = "<group>"; };
-		C51016071A92A577003D0D2D /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = Models/Events.swift; sourceTree = "<group>"; };
+		C5BFA54A1A92B0C900F3249A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,7 +598,7 @@
 		19CE22511A911403003C9DFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C51016071A92A577003D0D2D /* Events.swift */,
+				C5BFA54A1A92B0C900F3249A /* Event.swift */,
 				19CE22521A91143B003C9DFE /* EventItem.swift */,
 			);
 			name = Models;
@@ -836,9 +836,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51016081A92A577003D0D2D /* Events.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
+				C5BFA54B1A92B0C900F3249A /* Event.swift in Sources */,
 				19CE22531A91143B003C9DFE /* EventItem.swift in Sources */,
 				19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */,
 				19CE22501A90FFCC003C9DFE /* EventDetailsController.swift in Sources */,

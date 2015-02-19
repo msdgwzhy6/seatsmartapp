@@ -10,7 +10,7 @@ import UIKit
 
 class EventItem: NSObject {
 
-    var basePrice: String
+    var basePrice: NSNumber
     var date:      String
     var latidude:  String
     var longitude: String
@@ -22,7 +22,7 @@ class EventItem: NSObject {
     }
     
     init(fromString title: NSString) {
-        self.basePrice = "0.00"
+        self.basePrice = 0.00
         self.date      = ""
         self.latidude  = "0.0"
         self.longitude = "0.0"

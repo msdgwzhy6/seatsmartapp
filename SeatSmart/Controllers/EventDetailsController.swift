@@ -11,12 +11,18 @@ import UIKit
 class EventDetailsController: UIViewController {
 
     @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventPriceLabel: UILabel!
+    @IBOutlet weak var eventZipLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.eventTitleLabel.text = eventItems[selectedEventRow].title
-        // Do any additional setup after loading the view.
+        self.eventPriceLabel.text = "$" + eventItems[selectedEventRow].basePrice.stringValue
+        self.eventDateLabel.text  = eventItems[selectedEventRow].date
+        self.eventZipLabel.text   = eventItems[selectedEventRow].zip
+
     }
 
     override func didReceiveMemoryWarning() {

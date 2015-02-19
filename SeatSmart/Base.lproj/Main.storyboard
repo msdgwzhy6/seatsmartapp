@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ElX-Jv-uq5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Events-->
@@ -126,8 +127,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvs-yW-7HM">
+                                <rect key="frame" x="0.0" y="119" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Zip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ot-8y-2YD">
+                                <rect key="frame" x="0.0" y="192" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmv-R6-BfL">
+                                <rect key="frame" x="0.0" y="156" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-ad-22m">
-                                <rect key="frame" x="16" y="276" width="568" height="39"/>
+                                <rect key="frame" x="16" y="72" width="568" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,13 +154,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fvs-yW-7HM" firstAttribute="top" secondItem="WLw-ad-22m" secondAttribute="bottom" constant="8" id="1vT-51-l68"/>
+                            <constraint firstItem="WLw-ad-22m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7be-Lp-9Pp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fvs-yW-7HM" secondAttribute="trailing" constant="-16" id="CEU-uc-wvH"/>
                             <constraint firstAttribute="centerX" secondItem="WLw-ad-22m" secondAttribute="centerX" id="CQW-Tn-LZ0"/>
                             <constraint firstAttribute="centerY" secondItem="WLw-ad-22m" secondAttribute="centerY" constant="4.5" id="H4z-45-zt5"/>
+                            <constraint firstItem="fvs-yW-7HM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="TEh-I9-BkQ"/>
+                            <constraint firstItem="WLw-ad-22m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e5y-Y8-y4g"/>
+                            <constraint firstItem="WLw-ad-22m" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iS3-uX-fXC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="TO2-ZI-iEV"/>
                     <connections>
+                        <outlet property="eventDateLabel" destination="fvs-yW-7HM" id="XuT-hQ-U2u"/>
+                        <outlet property="eventPriceLabel" destination="hmv-R6-BfL" id="hbZ-1e-IOA"/>
                         <outlet property="eventTitleLabel" destination="WLw-ad-22m" id="Noj-fz-oD2"/>
+                        <outlet property="eventZipLabel" destination="1ot-8y-2YD" id="hG4-3q-i9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
