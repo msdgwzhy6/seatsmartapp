@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>86037B71-42DA-4CF0-A770-96BC9957ADD5</string>
+	<string>87679A66-A3FD-4CB7-B874-4E0D48DECE00</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SeatSmart</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>322863CCCEC2A1BB4A26B796B9DE94521A5583C0</key>
-		<string>ssh://github.com/outsidervc/seatsmartapp.git</string>
+		<string>github.com:outsidervc/seatsmartapp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SeatSmart.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/outsidervc/seatsmartapp.git</string>
+	<string>github.com:outsidervc/seatsmartapp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
