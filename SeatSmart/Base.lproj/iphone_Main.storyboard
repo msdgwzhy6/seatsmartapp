@@ -354,7 +354,7 @@
         <image name="details-item-shadow.png" width="320" height="127"/>
         <image name="details-item-value.png" width="45" height="55"/>
         <image name="list-item-calendar.png" width="10" height="11"/>
-        <image name="list-item-cover1.png" width="317" height="124"/>
+        <image name="list-item-cover1.png" width="320" height="124"/>
         <image name="list-item-pin.png" width="8" height="12"/>
         <image name="list-item-shadow.png" width="320" height="52"/>
         <image name="list-item-type.png" width="58" height="14"/>
