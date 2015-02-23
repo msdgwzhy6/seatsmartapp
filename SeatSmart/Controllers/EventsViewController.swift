@@ -54,10 +54,6 @@ class EventsViewController: UITableViewController {
             }
             
             for item: AnyObject in jsonData {
-                println(item["title"] as String)
-                println(item["basePrice"] as NSNumber)
-                println(item["zip"] as String)
-                println("------")
 
                 var eventItem       = EventItem(fromString: item["title"] as String)
                 
