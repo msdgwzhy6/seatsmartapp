@@ -144,6 +144,14 @@
 		1966C34C1A91B3B100FB0BC7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1966C34B1A91B3B100FB0BC7 /* MapKit.framework */; };
 		1966C34E1A91B3BA00FB0BC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1966C34D1A91B3BA00FB0BC7 /* UIKit.framework */; };
 		1966C3501A91B3D200FB0BC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1966C34F1A91B3D200FB0BC7 /* CoreGraphics.framework */; };
+		19945A4B1A9AD545008A7955 /* event1.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A471A9AD545008A7955 /* event1.png */; };
+		19945A4C1A9AD545008A7955 /* event2.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A481A9AD545008A7955 /* event2.png */; };
+		19945A4D1A9AD545008A7955 /* event3.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A491A9AD545008A7955 /* event3.png */; };
+		19945A4E1A9AD545008A7955 /* event4.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A4A1A9AD545008A7955 /* event4.png */; };
+		19945A501A9AD90B008A7955 /* event5.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A4F1A9AD90B008A7955 /* event5.png */; };
+		19945A541A9ADDB8008A7955 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A531A9ADDB8008A7955 /* settings-icon.png */; };
+		19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19945A551A9ADE4B008A7955 /* LoginViewController.swift */; };
+		19945A581A9AEAB0008A7955 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A571A9AEAB0008A7955 /* splash.png */; };
 		19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22281A90FA14003C9DFE /* AppDelegate.swift */; };
 		19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */; };
 		19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CE222F1A90FA15003C9DFE /* Main.storyboard */; };
@@ -153,6 +161,10 @@
 		19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE224B1A90FF67003C9DFE /* EventsViewController.swift */; };
 		19CE22501A90FFCC003C9DFE /* EventDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */; };
 		19CE22531A91143B003C9DFE /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22521A91143B003C9DFE /* EventItem.swift */; };
+		19ECD8F21A9AB3E400AE8409 /* seatsmart-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 19ECD8F11A9AB3E400AE8409 /* seatsmart-logo.png */; };
+		19ECD8F41A9AB53400AE8409 /* seatsmart-test-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 19ECD8F31A9AB53300AE8409 /* seatsmart-test-data.json */; };
+		19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F59E501A9B027000024C93 /* RegisterViewController.swift */; };
+		19F59E531A9B0C8900024C93 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F59E521A9B0C8900024C93 /* app-icon.png */; };
 		C5BFA54B1A92B0C900F3249A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFA54A1A92B0C900F3249A /* Event.swift */; };
 /* End PBXBuildFile section */
 
@@ -304,6 +316,14 @@
 		1966C34B1A91B3B100FB0BC7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1966C34D1A91B3BA00FB0BC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1966C34F1A91B3D200FB0BC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		19945A471A9AD545008A7955 /* event1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event1.png; sourceTree = "<group>"; };
+		19945A481A9AD545008A7955 /* event2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event2.png; sourceTree = "<group>"; };
+		19945A491A9AD545008A7955 /* event3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event3.png; sourceTree = "<group>"; };
+		19945A4A1A9AD545008A7955 /* event4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event4.png; sourceTree = "<group>"; };
+		19945A4F1A9AD90B008A7955 /* event5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event5.png; sourceTree = "<group>"; };
+		19945A531A9ADDB8008A7955 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
+		19945A551A9ADE4B008A7955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		19945A571A9AEAB0008A7955 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		19CE22231A90FA14003C9DFE /* SeatSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CE22271A90FA14003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CE22281A90FA14003C9DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +337,10 @@
 		19CE224B1A90FF67003C9DFE /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Controllers/EventsViewController.swift; sourceTree = "<group>"; };
 		19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailsController.swift; path = Controllers/EventDetailsController.swift; sourceTree = "<group>"; };
 		19CE22521A91143B003C9DFE /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventItem.swift; path = Models/EventItem.swift; sourceTree = "<group>"; };
+		19ECD8F11A9AB3E400AE8409 /* seatsmart-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seatsmart-logo.png"; sourceTree = "<group>"; };
+		19ECD8F31A9AB53300AE8409 /* seatsmart-test-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "seatsmart-test-data.json"; sourceTree = "<group>"; };
+		19F59E501A9B027000024C93 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		19F59E521A9B0C8900024C93 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		C5BFA54A1A92B0C900F3249A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -355,6 +379,11 @@
 		1966C23B1A91B1FF00FB0BC7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				19F59E521A9B0C8900024C93 /* app-icon.png */,
+				19945A571A9AEAB0008A7955 /* splash.png */,
+				19945A531A9ADDB8008A7955 /* settings-icon.png */,
+				19945A461A9AD545008A7955 /* eventsimages */,
+				19ECD8F11A9AB3E400AE8409 /* seatsmart-logo.png */,
 				1966C23C1A91B1FF00FB0BC7 /* iPad */,
 				1966C2611A91B20000FB0BC7 /* iPhone */,
 			);
@@ -509,9 +538,22 @@
 		1966C3441A91B21100FB0BC7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				19ECD8F31A9AB53300AE8409 /* seatsmart-test-data.json */,
 				1966C3451A91B21100FB0BC7 /* Locations.plist */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		19945A461A9AD545008A7955 /* eventsimages */ = {
+			isa = PBXGroup;
+			children = (
+				19945A4F1A9AD90B008A7955 /* event5.png */,
+				19945A471A9AD545008A7955 /* event1.png */,
+				19945A481A9AD545008A7955 /* event2.png */,
+				19945A491A9AD545008A7955 /* event3.png */,
+				19945A4A1A9AD545008A7955 /* event4.png */,
+			);
+			path = eventsimages;
 			sourceTree = "<group>";
 		};
 		19CE221A1A90FA14003C9DFE = {
@@ -583,6 +625,8 @@
 			children = (
 				19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */,
 				19CE224B1A90FF67003C9DFE /* EventsViewController.swift */,
+				19945A551A9ADE4B008A7955 /* LoginViewController.swift */,
+				19F59E501A9B027000024C93 /* RegisterViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -687,6 +731,7 @@
 				1966C2DB1A91B20000FB0BC7 /* tabbar-tab2@2x~ipad.png in Resources */,
 				1966C2E11A91B20000FB0BC7 /* tabbar-tab5@2x~ipad.png in Resources */,
 				1966C3331A91B20000FB0BC7 /* sliderThumb@2x.png in Resources */,
+				19945A4E1A9AD545008A7955 /* event4.png in Resources */,
 				1966C2F71A91B20000FB0BC7 /* details-item-cover1@2x.png in Resources */,
 				1966C31B1A91B20000FB0BC7 /* list-item-value@2x.png in Resources */,
 				1966C33A1A91B20000FB0BC7 /* tabbar-tab1.png in Resources */,
@@ -699,6 +744,7 @@
 				1966C32A1A91B20000FB0BC7 /* progressProgress.png in Resources */,
 				1966C32F1A91B20000FB0BC7 /* sliderMaxTrack@2x.png in Resources */,
 				1966C3211A91B20000FB0BC7 /* navigation-item-icon1@2x.png in Resources */,
+				19945A541A9ADDB8008A7955 /* settings-icon.png in Resources */,
 				1966C3231A91B20000FB0BC7 /* navigation-item-icon2@2x.png in Resources */,
 				1966C3431A91B20000FB0BC7 /* tabbar-tab5@2x.png in Resources */,
 				1966C2E31A91B20000FB0BC7 /* tabBarBackground@2x~ipad.png in Resources */,
@@ -714,6 +760,7 @@
 				19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */,
 				1966C2CF1A91B20000FB0BC7 /* list-item-cover4@2x~ipad.png in Resources */,
 				1966C3251A91B20000FB0BC7 /* navigation-item-icon3@2x.png in Resources */,
+				19945A4D1A9AD545008A7955 /* event3.png in Resources */,
 				1966C30B1A91B20000FB0BC7 /* list-item-cover1@2x.png in Resources */,
 				1966C2D51A91B20000FB0BC7 /* list-item-value@2x~ipad.png in Resources */,
 				1966C32D1A91B20000FB0BC7 /* progressTrack@2x.png in Resources */,
@@ -724,6 +771,7 @@
 				1966C3071A91B20000FB0BC7 /* input@2x.png in Resources */,
 				19CE22361A90FA15003C9DFE /* LaunchScreen.xib in Resources */,
 				1966C30E1A91B20000FB0BC7 /* list-item-cover3.png in Resources */,
+				19F59E531A9B0C8900024C93 /* app-icon.png in Resources */,
 				1966C3061A91B20000FB0BC7 /* input.png in Resources */,
 				1966C3121A91B20000FB0BC7 /* list-item-divider.png in Resources */,
 				1966C2E91A91B20000FB0BC7 /* bg-login-568h.png in Resources */,
@@ -744,6 +792,7 @@
 				1966C3191A91B20000FB0BC7 /* list-item-type@2x.png in Resources */,
 				1966C3361A91B20000FB0BC7 /* switchOffBackground.png in Resources */,
 				1966C31C1A91B20000FB0BC7 /* login-icon-email.png in Resources */,
+				19945A4C1A9AD545008A7955 /* event2.png in Resources */,
 				1966C2EF1A91B20000FB0BC7 /* button.png in Resources */,
 				1966C2E71A91B20000FB0BC7 /* barButton.png in Resources */,
 				1966C2FE1A91B20000FB0BC7 /* details-item-pin.png in Resources */,
@@ -756,6 +805,7 @@
 				1966C2C11A91B20000FB0BC7 /* background-landscape@2x~ipad.png in Resources */,
 				1966C3221A91B20000FB0BC7 /* navigation-item-icon2.png in Resources */,
 				1966C2E61A91B20000FB0BC7 /* backButton@2x.png in Resources */,
+				19945A4B1A9AD545008A7955 /* event1.png in Resources */,
 				1966C2E51A91B20000FB0BC7 /* backButton.png in Resources */,
 				1966C2F31A91B20000FB0BC7 /* Default@2x.png in Resources */,
 				1966C2EB1A91B20000FB0BC7 /* bg-login.png in Resources */,
@@ -767,6 +817,8 @@
 				1966C2DD1A91B20000FB0BC7 /* tabbar-tab3@2x~ipad.png in Resources */,
 				1966C31D1A91B20000FB0BC7 /* login-icon-email@2x.png in Resources */,
 				1966C2D11A91B20000FB0BC7 /* list-item-cover5@2x~ipad.png in Resources */,
+				19945A581A9AEAB0008A7955 /* splash.png in Resources */,
+				19ECD8F41A9AB53400AE8409 /* seatsmart-test-data.json in Resources */,
 				1966C2C81A91B20000FB0BC7 /* list-item-calendar~ipad.png in Resources */,
 				1966C2E01A91B20000FB0BC7 /* tabbar-tab4~ipad.png in Resources */,
 				1966C2FA1A91B20000FB0BC7 /* details-item-cover3.png in Resources */,
@@ -799,6 +851,7 @@
 				1966C3001A91B20000FB0BC7 /* details-item-shadow.png in Resources */,
 				1966C3391A91B20000FB0BC7 /* switchOnBackground@2x.png in Resources */,
 				1966C2D81A91B20000FB0BC7 /* navigationBackground~ipad.png in Resources */,
+				19945A501A9AD90B008A7955 /* event5.png in Resources */,
 				1966C3181A91B20000FB0BC7 /* list-item-type.png in Resources */,
 				1966C2D31A91B20000FB0BC7 /* list-item-pin@2x~ipad.png in Resources */,
 				1966C33B1A91B20000FB0BC7 /* tabbar-tab1@2x.png in Resources */,
@@ -811,6 +864,7 @@
 				1966C3401A91B20000FB0BC7 /* tabbar-tab4.png in Resources */,
 				1966C3301A91B20000FB0BC7 /* sliderMinTrack.png in Resources */,
 				1966C2FD1A91B20000FB0BC7 /* details-item-cover4@2x.png in Resources */,
+				19ECD8F21A9AB3E400AE8409 /* seatsmart-logo.png in Resources */,
 				1966C3291A91B20000FB0BC7 /* navigationBackground@2x.png in Resources */,
 				1966C2F01A91B20000FB0BC7 /* button@2x.png in Resources */,
 				1966C2E81A91B20000FB0BC7 /* barButton@2x.png in Resources */,
@@ -838,6 +892,8 @@
 			files = (
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
+				19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */,
+				19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */,
 				C5BFA54B1A92B0C900F3249A /* Event.swift in Sources */,
 				19CE22531A91143B003C9DFE /* EventItem.swift in Sources */,
 				19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */,

@@ -1,0 +1,42 @@
+[
+    {
+        "title"    : "The show",
+        "zip"      : "78220",
+        "date"     : "12-12-2015",
+        "basePrice": 200.00,
+        "latitude" : "0.0",
+        "longitude": "0.0"
+    },
+    {
+        "title"    : "Huey's Opera",
+        "zip"      : "78123",
+        "date"     : "01-25-2015",
+        "basePrice": 380.00,
+        "latitude" : "0.0",
+        "longitude": "0.0"
+    },
+    {
+        "title"    : "Adam Chants",
+        "zip"      : "78564",
+        "date"     : "12-12-2019",
+        "basePrice": 130.00,
+        "latitude" : "0.0",
+        "longitude": "0.0"
+    },
+    {
+        "title"    : "Spurs vs Heat",
+        "zip"      : "78564",
+        "date"     : "12-12-2019",
+        "basePrice": 50.00,
+        "latitude" : "0.0",
+        "longitude": "0.0"
+    },
+    {
+        "title"    : "Spurs vs Heat 2",
+        "zip"      : "78564",
+        "date"     : "12-12-2019",
+        "basePrice": 130.00,
+        "latitude" : "0.0",
+        "longitude": "0.0"
+    }
+]

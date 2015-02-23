@@ -13,28 +13,11 @@ var selectedEventRow:Int = 0
 var eventItems = [EventItem]()
 
 class EventsViewController: UITableViewController {
+    @IBOutlet var eventsTableView: UITableView!
     
     func loadInitialData() {
-//        var item1 = EventItem(fromString: "Event 1: Some Concert")
-//        item1.zip = "78209"
-//        item1.date = "2/15/2015"
-//        item1.basePrice = "25.00"
-//        
-//        var item2 = EventItem(fromString: "Event 2: Some Basketball Game")
-//        item2.zip = "78209"
-//        item2.date = "2/15/2015"
-//        item2.basePrice = "25.00"
-//        
-//        var item3 = EventItem(fromString: "Event 3: Some Broadway Show")
-//        item2.zip = "78209"
-//        item2.date = "2/15/2015"
-//        item2.basePrice = "25.00"
-//        
-//        eventItems.append(item1)
-//        eventItems.append(item2)
-//        eventItems.append(item3)
         
-        let urlPath = "http://outsidervc.com/seatsmart/test_events_data.json"
+        let urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
         let url: NSURL = NSURL(string: urlPath)!
         let session = NSURLSession.sharedSession()
         
@@ -54,11 +37,6 @@ class EventsViewController: UITableViewController {
             }
             
             for item: AnyObject in jsonData {
-                println(item["title"] as String)
-                println(item["basePrice"] as NSNumber)
-                println(item["zip"] as String)
-                println("------")
-
                 var eventItem       = EventItem(fromString: item["title"] as String)
                 
                 eventItem.basePrice = item["basePrice"] as NSNumber
@@ -69,6 +47,12 @@ class EventsViewController: UITableViewController {
 
                 eventItems.append(eventItem)
             }
+            
+            self.eventsTableView.reloadData()
+            
+            self.eventsTableView.rowHeight = 130
+            self.eventsTableView.backgroundView = UIImageView(image: UIImage(named: "bg-login"))
+            
         })
         
         task.resume()        
@@ -97,8 +81,13 @@ class EventsViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventItemPrototypeCell", forIndexPath: indexPath) as UITableViewCell
         
+        cell.backgroundColor = UIColor.clearColor()
+        cell.backgroundView = UIImageView(image: UIImage(named: "event\(indexPath.row + 1)"))
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        
         let eventItem = eventItems[indexPath.row]
         cell.textLabel?.text = eventItem.title
+        cell.detailTextLabel?.text = eventItem.date
         
         return cell
     }
