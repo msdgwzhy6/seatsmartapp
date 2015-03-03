@@ -165,7 +165,8 @@
 		19ECD8F41A9AB53400AE8409 /* seatsmart-test-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 19ECD8F31A9AB53300AE8409 /* seatsmart-test-data.json */; };
 		19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F59E501A9B027000024C93 /* RegisterViewController.swift */; };
 		19F59E531A9B0C8900024C93 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F59E521A9B0C8900024C93 /* app-icon.png */; };
-		C5BFA54B1A92B0C900F3249A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFA54A1A92B0C900F3249A /* Event.swift */; };
+		C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */; };
+		C5F8A8151AA0EFA300EF4452 /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8A8141AA0EFA300EF4452 /* EventDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -335,13 +336,14 @@
 		19CE22401A90FA15003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CE22411A90FA15003C9DFE /* SeatSmartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSmartTests.swift; sourceTree = "<group>"; };
 		19CE224B1A90FF67003C9DFE /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Controllers/EventsViewController.swift; sourceTree = "<group>"; };
-		19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailsController.swift; path = Controllers/EventDetailsController.swift; sourceTree = "<group>"; };
+		19CE224F1A90FFCC003C9DFE /* EventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = EventDetailsController.swift; path = Controllers/EventDetailsController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		19CE22521A91143B003C9DFE /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventItem.swift; path = Models/EventItem.swift; sourceTree = "<group>"; };
 		19ECD8F11A9AB3E400AE8409 /* seatsmart-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seatsmart-logo.png"; sourceTree = "<group>"; };
 		19ECD8F31A9AB53300AE8409 /* seatsmart-test-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "seatsmart-test-data.json"; sourceTree = "<group>"; };
 		19F59E501A9B027000024C93 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		19F59E521A9B0C8900024C93 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
-		C5BFA54A1A92B0C900F3249A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
+		C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeatViewController.swift; path = Controllers/SeatViewController.swift; sourceTree = "<group>"; };
+		C5F8A8141AA0EFA300EF4452 /* EventDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDate.swift; path = Models/EventDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -627,6 +629,7 @@
 				19CE224B1A90FF67003C9DFE /* EventsViewController.swift */,
 				19945A551A9ADE4B008A7955 /* LoginViewController.swift */,
 				19F59E501A9B027000024C93 /* RegisterViewController.swift */,
+				C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -642,8 +645,8 @@
 		19CE22511A911403003C9DFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C5BFA54A1A92B0C900F3249A /* Event.swift */,
 				19CE22521A91143B003C9DFE /* EventItem.swift */,
+				C5F8A8141AA0EFA300EF4452 /* EventDate.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -890,12 +893,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
 				19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */,
 				19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */,
-				C5BFA54B1A92B0C900F3249A /* Event.swift in Sources */,
 				19CE22531A91143B003C9DFE /* EventItem.swift in Sources */,
+				C5F8A8151AA0EFA300EF4452 /* EventDate.swift in Sources */,
 				19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */,
 				19CE22501A90FFCC003C9DFE /* EventDetailsController.swift in Sources */,
 			);

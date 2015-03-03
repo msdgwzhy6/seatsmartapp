@@ -16,6 +16,7 @@ class EventItem: NSObject {
     var longitude: String
     var title:     String
     var zip:       String
+    var imageUrl:  String
     
     convenience override init() {
         self.init(fromString: "Event Title")
@@ -28,6 +29,7 @@ class EventItem: NSObject {
         self.longitude = "0.0"
         self.title     = title
         self.zip       = ""
+        self.imageUrl  = ""
         super.init()
     }
 }

@@ -7,44 +7,87 @@
 //
 
 import UIKit
-import MapKit
 
-class EventDetailsController: UIViewController, MKMapViewDelegate {
+var eventDates = [EventDate]()
 
-    @IBOutlet weak var eventDateLabel: UILabel!
-    @IBOutlet weak var eventTitleLabel: UILabel!
-    @IBOutlet weak var eventPriceLabel: UILabel!
-    @IBOutlet weak var eventZipLabel: UILabel!
+
+class EventDetailsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var ticketTableView: UITableView!
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var eventTitleLabel: UILabel!
+
+    var eventDate: EventDate!
+
+    func loadInitialData() {
+        
+        let urlPath = "http://outsidervc.com/seatsmart/test_event_dates.json"
+        let url: NSURL = NSURL(string: urlPath)!
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
+            
+            if((error) != nil) {
+                println(error.localizedDescription)
+            }
+
+            var err: NSError?
+            
+            var jsonData: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)!
+            
+            if(err != nil) {
+                println("JSON Error \(err!.localizedDescription)")
+            }
+            //println(jsonData)
+            
+            self.eventDate = EventDate(fromString: jsonData["title"] as String)
+            
+            self.eventDate.eventId    = jsonData["eventId"] as String
+            self.eventDate.type       = jsonData["type"] as String
+            self.eventDate.priceRange = jsonData["priceRange"] as String
+            self.eventDate.eventDates = jsonData["eventDates"] as NSArray
+
+            self.eventTitleLabel.text = self.eventDate.title
+        })
+        
+        task.resume()
+        
+
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadInitialData()
 
-        self.eventTitleLabel.text = eventItems[selectedEventRow].title
-        self.eventPriceLabel.text = "$" + eventItems[selectedEventRow].basePrice.stringValue
-        self.eventDateLabel.text  = eventItems[selectedEventRow].date
-        self.eventZipLabel.text   = eventItems[selectedEventRow].zip
-        
-        //inital location will just be on san antonio
-        //29.421041, -98.489685
-        var latitude:CLLocationDegrees  = 29.421041
-        var longitude:CLLocationDegrees = -98.489685
-        
-        var latDelta:CLLocationDegrees = 0.05
-        var lonDelta:CLLocationDegrees = 0.05
-        
-        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-        
-        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        var region:MKCoordinateRegion       = MKCoordinateRegionMake(location, span)
-        
-        mapView.setRegion(region, animated: true)
+
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return eventDates.count }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("eventDatePrototypeCell", forIndexPath: indexPath) as UITableViewCell
+        
+        let eventDateRow: AnyObject = eventDates[indexPath.row]
+        
+        cell.textLabel?.text       = eventDates[indexPath.row].eventDates[indexPath.row]["location"] as? String
+        cell.detailTextLabel?.text = eventDates[indexPath.row].eventDates[indexPath.row]["date"] as? String
 
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //what happens when a table cell is tapped
+        //go to next view with quantity confirmation and email address box/i have an account
+
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Navigation
