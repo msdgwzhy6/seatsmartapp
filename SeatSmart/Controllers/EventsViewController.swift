@@ -12,12 +12,33 @@ import Foundation
 var selectedEventRow:Int = 0
 var eventItems = [EventItem]()
 
-class EventsViewController: UITableViewController {
+class EventsViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet var eventsTableView: UITableView!
+    @IBOutlet weak var searchTextField: UISearchBar!
+    
+    var searchActive : Bool = false
+    var searchIsTyping : Bool = false
     
     func loadInitialData() {
         
         let urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
+        self.loadTableDataFromUrl(urlPath)
+        self.eventsTableView.rowHeight = 130
+        self.eventsTableView.backgroundView = UIImageView(image: UIImage(named: "bg-login"))
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.loadInitialData()
+        self.searchTextField.delegate = self
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func loadTableDataFromUrl(urlPath: String) {
         let url: NSURL = NSURL(string: urlPath)!
         let session = NSURLSession.sharedSession()
         
@@ -31,13 +52,14 @@ class EventsViewController: UITableViewController {
             var err: NSError?
             
             var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSArray
-
+            
             if(err != nil) {
                 println("JSON Error \(err!.localizedDescription)")
             }
             
+            eventItems.removeAll();
             for item: AnyObject in jsonData {
-
+                
                 var eventItem       = EventItem(fromString: item["title"] as String)
                 
                 eventItem.basePrice = item["basePrice"] as NSNumber
@@ -45,31 +67,47 @@ class EventsViewController: UITableViewController {
                 eventItem.latidude  = item["latitude"] as String
                 eventItem.longitude = item["longitude"] as String
                 eventItem.zip       = item["zip"] as String
-
+                
                 eventItems.append(eventItem)
             }
             
-            self.eventsTableView.reloadData()
-            
-            self.eventsTableView.rowHeight = 130
-            self.eventsTableView.backgroundView = UIImageView(image: UIImage(named: "bg-login"))
-            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.eventsTableView.reloadData()
+            })
         })
         
-        task.resume()        
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.loadInitialData()
+        task.resume()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Search bar functions
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
     }
     
-    // MARK: - Table view data source
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        Util.delay(0.5) {
+            var urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-searchresults.json"
+            if (searchText == "") {
+                urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
+            }
+            println("Search for " + searchText)
+            self.loadTableDataFromUrl(urlPath)
+        }
+    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -98,50 +136,5 @@ class EventsViewController: UITableViewController {
         selectedEventRow = indexPath.row
         
         return indexPath
-}
-
-/*
-// Override to support conditional editing of the table view.
-override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-// Return NO if you do not want the specified item to be editable.
-return true
-}
-*/
-
-/*
-// Override to support editing the table view.
-override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-if editingStyle == .Delete {
-// Delete the row from the data source
-tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-} else if editingStyle == .Insert {
-// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-}
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-// Return NO if you do not want the item to be re-orderable.
-return true
-}
-*/
-
-/*
-// MARK: - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-// Get the new view controller using [segue destinationViewController].
-// Pass the selected object to the new view controller.
-}
-*/
+    }
 }

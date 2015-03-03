@@ -76,6 +76,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="eventsTableView" destination="7Di-Yr-zKD" id="Ty7-54-val"/>
+                        <outlet property="searchTextField" destination="gG7-I2-vJV" id="5oD-0m-RId"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj4-tm-LVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -614,8 +615,8 @@
         <image name="settings-icon.png" width="35" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CwZ-os-HHM"/>
+        <segue reference="G9w-X5-3du"/>
         <segue reference="cZc-DZ-MzW"/>
-        <segue reference="guW-av-eUE"/>
+        <segue reference="J90-Id-a6o"/>
     </inferredMetricsTieBreakers>
 </document>
