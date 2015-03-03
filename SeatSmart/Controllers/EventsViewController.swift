@@ -85,8 +85,8 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         searchActive = true;
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
