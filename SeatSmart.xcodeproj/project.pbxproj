@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195E85A71AA56CBA003C95EC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E85A61AA56CBA003C95EC /* Util.swift */; };
 		1966C2C11A91B20000FB0BC7 /* background-landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */; };
 		1966C2C21A91B20000FB0BC7 /* background-landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */; };
 		1966C2C31A91B20000FB0BC7 /* background@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23F1A91B1FF00FB0BC7 /* background@2x~ipad.png */; };
@@ -180,6 +181,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		195E85A61AA56CBA003C95EC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape~ipad.png"; sourceTree = "<group>"; };
 		1966C23F1A91B1FF00FB0BC7 /* background@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x~ipad.png"; sourceTree = "<group>"; };
@@ -369,6 +371,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193CB9271AA6425C001C8F44 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				195E85A61AA56CBA003C95EC /* Util.swift */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		1966C23A1A91B1DB00FB0BC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +594,7 @@
 		19CE22251A90FA14003C9DFE /* SeatSmart */ = {
 			isa = PBXGroup;
 			children = (
+				193CB9271AA6425C001C8F44 /* lib */,
 				1966C23A1A91B1DB00FB0BC7 /* Resources */,
 				19CE22511A911403003C9DFE /* Models */,
 				19CE224E1A90FF94003C9DFE /* Data */,
@@ -895,6 +906,7 @@
 			files = (
 				C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
+				195E85A71AA56CBA003C95EC /* Util.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
 				19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */,
 				19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */,

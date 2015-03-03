@@ -75,6 +75,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="eventsTableView" destination="7Di-Yr-zKD" id="Ty7-54-val"/>
+                        <outlet property="searchTextField" destination="gG7-I2-vJV" id="5oD-0m-RId"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj4-tm-LVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
