@@ -8,16 +8,19 @@
 
 import UIKit
 
-var eventDates = [EventDate]()
-
+//var eventDates = [EventDate]()
 
 class EventDetailsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var ticketTableView: UITableView!
-    
     @IBOutlet weak var eventTitleLabel: UILabel!
 
-    var eventDate: EventDate!
+    var event: EventDate!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.loadInitialData()
+    }
 
     func loadInitialData() {
         
@@ -40,48 +43,52 @@ class EventDetailsController: UIViewController, UITableViewDelegate, UITableView
             }
             //println(jsonData)
             
-            self.eventDate = EventDate(fromString: jsonData["title"] as String)
+            self.event = EventDate(fromString: jsonData["title"] as String)
             
-            self.eventDate.eventId    = jsonData["eventId"] as String
-            self.eventDate.type       = jsonData["type"] as String
-            self.eventDate.priceRange = jsonData["priceRange"] as String
-            self.eventDate.eventDates = jsonData["eventDates"] as NSArray
+            self.event.eventId    = jsonData["eventId"] as String
+            self.event.type       = jsonData["type"] as String
+            self.event.priceRange = jsonData["priceRange"] as String
+            self.event.eventDates = jsonData["eventDates"] as NSArray
 
-            self.eventTitleLabel.text = self.eventDate.title
+            self.eventTitleLabel.text = self.event.title
+
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.ticketTableView.reloadData()
+            })
         })
         
         task.resume()
         
 
     }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.loadInitialData()
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int { return 1 }
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (self.event == nil) {
+            return 0
+        } else {
+            return self.event.eventDates.count
+        }
     }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return eventDates.count }
-    
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("eventDatePrototypeCell", forIndexPath: indexPath) as UITableViewCell
-        
-        let eventDateRow: AnyObject = eventDates[indexPath.row]
-        
-        cell.textLabel?.text       = eventDates[indexPath.row].eventDates[indexPath.row]["location"] as? String
-        cell.detailTextLabel?.text = eventDates[indexPath.row].eventDates[indexPath.row]["date"] as? String
+        let cell: eventDateCell = tableView.dequeueReusableCellWithIdentifier("eventDatePrototypeCell", forIndexPath: indexPath) as eventDateCell
 
-        
+        var eventDatesArray: AnyObject = self.event.eventDates[indexPath.row]
+
+        cell.setCell(eventDatesArray["eventDt"] as String,
+            weekdayLabelText: eventDatesArray["weekday"] as String,
+            timeLabelText: eventDatesArray["time"] as String,
+            locationLabelText: eventDatesArray["location"] as String)
+
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //what happens when a table cell is tapped
         //go to next view with quantity confirmation and email address box/i have an account
-
     }
     
     

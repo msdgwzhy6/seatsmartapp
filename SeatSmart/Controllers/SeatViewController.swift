@@ -9,15 +9,11 @@
 import UIKit
 import WebKit
 
-class SeatViewController: UIViewController, UITableViewDelegate, UIWebViewDelegate {
+class SeatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate {
     
     @IBOutlet weak var seatTableView: UITableView!
     @IBOutlet weak var seatingChartWebView: UIWebView!
-    
-    
 
-    
-    
     override func loadView() {
         super.loadView()
 //        self.seatingChartWebView = WKWebView(frame: )
@@ -32,9 +28,21 @@ class SeatViewController: UIViewController, UITableViewDelegate, UIWebViewDelega
         self.seatingChartWebView!.loadRequest(req)
 
     }
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int { return 1 }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1 //for now
+    }
      
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //tapiping a seat should go to next view
+        //tapping a seat should go to next view
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: seatCell = tableView.dequeueReusableCellWithIdentifier("seatPrototypeCell", forIndexPath: indexPath) as seatCell
+
+        return cell
     }
     
     
