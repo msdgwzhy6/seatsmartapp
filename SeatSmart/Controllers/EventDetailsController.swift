@@ -14,6 +14,7 @@ class EventDetailsController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var ticketTableView: UITableView!
     @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var eventImage: UIImageView!
 
     var event: EventDate!
 
@@ -41,8 +42,7 @@ class EventDetailsController: UIViewController, UITableViewDelegate, UITableView
             if(err != nil) {
                 println("JSON Error \(err!.localizedDescription)")
             }
-            //println(jsonData)
-            
+
             self.event = EventDate(fromString: jsonData["title"] as String)
             
             self.event.eventId    = jsonData["eventId"] as String
@@ -51,15 +51,34 @@ class EventDetailsController: UIViewController, UITableViewDelegate, UITableView
             self.event.eventDates = jsonData["eventDates"] as NSArray
 
             self.eventTitleLabel.text = self.event.title
+            self.setBannerImage(self.event.type)
 
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.ticketTableView.reloadData()
             })
         })
-        
-        task.resume()
-        
 
+
+        task.resume()
+    }
+
+    func setBannerImage(eventType: String) {
+        var img: UIImage
+
+        switch eventType {
+        case "Theatre":
+            img = UIImage(named: "event2.png")!
+
+        case "Concert":
+            img = UIImage(named: "event1.png")!
+
+        case "Sport":
+            img = UIImage(named: "event5.png")!
+
+        default:
+            img = UIImage(named: "event4.png")!
+        }
+        eventImage.image = img
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int { return 1 }
