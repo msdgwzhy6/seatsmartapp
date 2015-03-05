@@ -357,12 +357,22 @@
                                     <segue destination="joH-dV-SPw" kind="show" id="FFT-S0-Vvn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBT-3d-pjV" customClass="FBLoginView">
+                                <rect key="frame" x="107" y="504" width="200" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AiX-hd-JK5"/>
+                                    <constraint firstAttribute="height" constant="100" id="Pdo-Lb-rrv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GBT-3d-pjV" firstAttribute="top" secondItem="aXr-JG-8sp" secondAttribute="bottom" constant="40" id="1Dc-wt-f8K"/>
                             <constraint firstItem="aXr-JG-8sp" firstAttribute="centerX" secondItem="3lX-Gp-sp2" secondAttribute="centerX" id="7f9-ib-DJ9"/>
                             <constraint firstItem="pRr-tv-vZQ" firstAttribute="top" secondItem="Sm7-Hx-ZV2" secondAttribute="bottom" constant="74" id="9g2-Mg-NLO"/>
                             <constraint firstAttribute="centerX" secondItem="3lX-Gp-sp2" secondAttribute="centerX" id="Ehm-Oa-K2G"/>
+                            <constraint firstAttribute="centerX" secondItem="GBT-3d-pjV" secondAttribute="centerX" id="F2S-qy-PX8"/>
                             <constraint firstItem="aXr-JG-8sp" firstAttribute="top" secondItem="LD2-iU-0fG" secondAttribute="bottom" constant="42" id="LAX-Ik-krq"/>
                             <constraint firstAttribute="centerX" secondItem="LD2-iU-0fG" secondAttribute="centerX" id="MPL-iF-ZIv"/>
                             <constraint firstItem="3lX-Gp-sp2" firstAttribute="top" secondItem="LD2-iU-0fG" secondAttribute="bottom" constant="14" id="RBM-P4-iQb"/>
@@ -377,6 +387,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="fbLoginView" destination="GBT-3d-pjV" id="eej-H3-thS"/>
                         <outlet property="loginEmailField" destination="pRr-tv-vZQ" id="2LI-eT-9Yl"/>
                         <outlet property="loginPasswordField" destination="3Qq-UV-fin" id="gir-oz-PxY"/>
                     </connections>

@@ -21,8 +21,11 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
     
     func loadInitialData() {
         
-        let urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
-        self.loadTableDataFromUrl(urlPath)
+        let filter = "seatsmart-test-data.json"
+        
+        let seatsmartApi = SeatSmartApi()
+        seatsmartApi.getEvents(filter, self.handleGetEvents)
+        
         self.eventsTableView.rowHeight = 130
         self.eventsTableView.backgroundView = UIImageView(image: UIImage(named: "bg-login"))
     }
@@ -38,45 +41,28 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadTableDataFromUrl(urlPath: String) {
-        let url: NSURL = NSURL(string: urlPath)!
-        let session = NSURLSession.sharedSession()
+    func handleGetEvents(responseData : NSString, error : NSError) {
+
+        // var jsonData = NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSArray
+        var jsonData : NSArray = []
         
-        let task = session.dataTaskWithURL(url, completionHandler: {
-            data, response, error -> Void in
+        eventItems.removeAll();
+        for item: AnyObject in jsonData {
             
-            if((error) != nil) {
-                println(error.localizedDescription)
-            }
+            var eventItem       = EventItem(fromString: item["title"] as String)
             
-            var err: NSError?
+            eventItem.basePrice = item["basePrice"] as NSNumber
+            eventItem.date      = item["date"] as String
+            eventItem.latidude  = item["latitude"] as String
+            eventItem.longitude = item["longitude"] as String
+            eventItem.zip       = item["zip"] as String
             
-            var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSArray
-            
-            if(err != nil) {
-                println("JSON Error \(err!.localizedDescription)")
-            }
-            
-            eventItems.removeAll();
-            for item: AnyObject in jsonData {
-                
-                var eventItem       = EventItem(fromString: item["title"] as String)
-                
-                eventItem.basePrice = item["basePrice"] as NSNumber
-                eventItem.date      = item["date"] as String
-                eventItem.latidude  = item["latitude"] as String
-                eventItem.longitude = item["longitude"] as String
-                eventItem.zip       = item["zip"] as String
-                
-                eventItems.append(eventItem)
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.eventsTableView.reloadData()
-            })
+            eventItems.append(eventItem)
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.eventsTableView.reloadData()
         })
-        
-        task.resume()
     }
     
     // MARK: - Search bar functions
@@ -105,7 +91,7 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
                 urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
             }
             println("Search for " + searchText)
-            self.loadTableDataFromUrl(urlPath)
+            //self.loadTableDataFromUrl(urlPath)
         }
     }
     
