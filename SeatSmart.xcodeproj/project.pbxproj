@@ -167,6 +167,7 @@
 		19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F59E501A9B027000024C93 /* RegisterViewController.swift */; };
 		19F59E531A9B0C8900024C93 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F59E521A9B0C8900024C93 /* app-icon.png */; };
 		C53979871AA7B52C008C9A07 /* seatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53979861AA7B52B008C9A07 /* seatCell.swift */; };
+		C5785D6D1AAA0BA600D50571 /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5785D6C1AAA0BA600D50571 /* EventTicket.swift */; };
 		C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */; };
 		C5AA7C211AA7824A00C3BDD0 /* eventDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA7C201AA7824A00C3BDD0 /* eventDateCell.swift */; };
 		C5F8A8151AA0EFA300EF4452 /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8A8141AA0EFA300EF4452 /* EventDate.swift */; };
@@ -347,6 +348,7 @@
 		19F59E501A9B027000024C93 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		19F59E521A9B0C8900024C93 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		C53979861AA7B52B008C9A07 /* seatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatCell.swift; sourceTree = "<group>"; };
+		C5785D6C1AAA0BA600D50571 /* EventTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTicket.swift; path = Models/EventTicket.swift; sourceTree = "<group>"; };
 		C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeatViewController.swift; path = Controllers/SeatViewController.swift; sourceTree = "<group>"; };
 		C5AA7C201AA7824A00C3BDD0 /* eventDateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventDateCell.swift; sourceTree = "<group>"; };
 		C5F8A8141AA0EFA300EF4452 /* EventDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDate.swift; path = Models/EventDate.swift; sourceTree = "<group>"; };
@@ -664,6 +666,7 @@
 			children = (
 				19CE22521A91143B003C9DFE /* EventItem.swift */,
 				C5F8A8141AA0EFA300EF4452 /* EventDate.swift */,
+				C5785D6C1AAA0BA600D50571 /* EventTicket.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 			files = (
 				C5AA7C211AA7824A00C3BDD0 /* eventDateCell.swift in Sources */,
 				C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */,
+				C5785D6D1AAA0BA600D50571 /* EventTicket.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				195E85A71AA56CBA003C95EC /* Util.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
