@@ -12,13 +12,18 @@ import Foundation
 class SeatSmartApi : NSObject {
 
     
-    func getEvents(filter: NSString, callback:(result: NSString, error: NSError)->()) {
+    func getEvents(filter: NSString, callback:(result: AnyObject)->()) {
         
-        var urlPath = SeatSmartConfig.ApiUrl + "/" + filter
-        self.sendGet(urlPath, callback)
+        var urlPath : NSString = "seatsmart-test-data.json"
+        if (filter != "") {
+            urlPath = filter
+        }
+        
+        var url = SeatSmartConfig.ApiUrl + "/" + urlPath
+        self.sendGet(url, callback)
     }
     
-    private func sendGet(urlPath: NSString, callback: (result: NSString, error: NSError)->()) {
+    private func sendGet(urlPath: NSString, callback: (result: AnyObject)->()) {
         let url: NSURL = NSURL(string: urlPath)!
         let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
         var request = NSMutableURLRequest(URL: url, cachePolicy: cachePolicy, timeoutInterval: 2.0)
@@ -35,12 +40,14 @@ class SeatSmartApi : NSObject {
             var jsonError: NSError?
             var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as NSArray
             println("data = \(jsonData)")
+            
+            callback(result: jsonData)
         }
         
         task.resume()
     }
     
-    private func sendPost(urlPath: NSString, postString: NSString, callback: (result: NSString, error: NSError)->()) {
+    private func sendPost(urlPath: NSString, postString: NSString, callback: (result: AnyObject)->()) {
         
         let url: NSURL = NSURL(string: urlPath)!
         let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
@@ -56,8 +63,11 @@ class SeatSmartApi : NSObject {
 
             println("response = \(response)")
             
-            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
-            callback(result: responseString!, error: error)
+            var jsonError: NSError?
+            var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as NSArray
+            println("data = \(jsonData)")
+            
+            callback(result: jsonData)
         }
         task.resume()
         

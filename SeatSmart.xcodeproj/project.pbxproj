@@ -153,6 +153,8 @@
 		19945A541A9ADDB8008A7955 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A531A9ADDB8008A7955 /* settings-icon.png */; };
 		19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19945A551A9ADE4B008A7955 /* LoginViewController.swift */; };
 		19945A581A9AEAB0008A7955 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A571A9AEAB0008A7955 /* splash.png */; };
+		19C78E361AA90E6B00F6B1F3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */; };
+		19C78E381AA91B3100F6B1F3 /* event6.png in Resources */ = {isa = PBXBuildFile; fileRef = 19C78E371AA91B3000F6B1F3 /* event6.png */; };
 		19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22281A90FA14003C9DFE /* AppDelegate.swift */; };
 		19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */; };
 		19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CE222F1A90FA15003C9DFE /* Main.storyboard */; };
@@ -172,7 +174,6 @@
 		C5F8A8151AA0EFA300EF4452 /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8A8141AA0EFA300EF4452 /* EventDate.swift */; };
 		C63A6D511AA7C60E0062A426 /* SeatSmartApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */; };
 		C63A6D531AA7C85B0062A426 /* SeatSmartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */; };
-		C63A6D551AA7E4210062A426 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63A6D541AA7E4210062A426 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,6 +333,8 @@
 		19945A531A9ADDB8008A7955 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
 		19945A551A9ADE4B008A7955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		19945A571A9AEAB0008A7955 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		19C78E371AA91B3000F6B1F3 /* event6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event6.png; sourceTree = "<group>"; };
 		19CE22231A90FA14003C9DFE /* SeatSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CE22271A90FA14003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CE22281A90FA14003C9DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -356,7 +359,6 @@
 		C63A6D4F1AA7C1270062A426 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatSmartApi.swift; sourceTree = "<group>"; };
 		C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatSmartConfig.swift; sourceTree = "<group>"; };
-		C63A6D541AA7E4210062A426 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,7 +371,7 @@
 				1966C34C1A91B3B100FB0BC7 /* MapKit.framework in Frameworks */,
 				1966C34A1A91B3A800FB0BC7 /* QuartzCore.framework in Frameworks */,
 				1966C3481A91B39D00FB0BC7 /* CoreImage.framework in Frameworks */,
-				C63A6D551AA7E4210062A426 /* FacebookSDK.framework in Frameworks */,
+				19C78E361AA90E6B00F6B1F3 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +575,7 @@
 		19945A461A9AD545008A7955 /* eventsimages */ = {
 			isa = PBXGroup;
 			children = (
+				19C78E371AA91B3000F6B1F3 /* event6.png */,
 				19945A4F1A9AD90B008A7955 /* event5.png */,
 				19945A471A9AD545008A7955 /* event1.png */,
 				19945A481A9AD545008A7955 /* event2.png */,
@@ -585,7 +588,7 @@
 		19CE221A1A90FA14003C9DFE = {
 			isa = PBXGroup;
 			children = (
-				C63A6D541AA7E4210062A426 /* FacebookSDK.framework */,
+				19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */,
 				1966C34F1A91B3D200FB0BC7 /* CoreGraphics.framework */,
 				1966C34D1A91B3BA00FB0BC7 /* UIKit.framework */,
 				1966C34B1A91B3B100FB0BC7 /* MapKit.framework */,
@@ -817,6 +820,7 @@
 				1966C2F61A91B20000FB0BC7 /* details-item-cover1.png in Resources */,
 				1966C31F1A91B20000FB0BC7 /* login-icon-pass@2x.png in Resources */,
 				1966C33C1A91B20000FB0BC7 /* tabbar-tab2.png in Resources */,
+				19C78E381AA91B3100F6B1F3 /* event6.png in Resources */,
 				1966C30F1A91B20000FB0BC7 /* list-item-cover3@2x.png in Resources */,
 				1966C33E1A91B20000FB0BC7 /* tabbar-tab3.png in Resources */,
 				1966C30C1A91B20000FB0BC7 /* list-item-cover2.png in Resources */,
