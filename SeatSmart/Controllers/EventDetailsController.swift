@@ -17,68 +17,29 @@ class EventDetailsController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var eventImage: UIImageView!
 
     var event: EventDate!
+    let seatsmartApi = SeatSmartApi()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadInitialData()
+        self.seatsmartApi.getEvents("test_event_dates.json", self.handleGetEvents)
     }
-
-    func loadInitialData() {
+    
+    func handleGetEvents(responseData : AnyObject) {
         
-        let urlPath = "http://outsidervc.com/seatsmart/test_event_dates.json"
-        let url: NSURL = NSURL(string: urlPath)!
-        let session = NSURLSession.sharedSession()
+        var jsonData : AnyObject = responseData
         
-        let task = session.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
-            
-            if((error) != nil) {
-                println(error.localizedDescription)
-            }
-
-            var err: NSError?
-            
-            var jsonData: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)!
-            
-            if(err != nil) {
-                println("JSON Error \(err!.localizedDescription)")
-            }
-
-            self.event = EventDate(fromString: jsonData["title"] as String)
-            
-            self.event.eventId    = jsonData["eventId"] as String
-            self.event.type       = jsonData["type"] as String
-            self.event.priceRange = jsonData["priceRange"] as String
-            self.event.eventDates = jsonData["eventDates"] as NSArray
-
-            self.eventTitleLabel.text = self.event.title
-            self.setBannerImage(self.event.type)
-
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.ticketTableView.reloadData()
-            })
+        self.event = EventDate(fromString: jsonData["title"] as String)
+        
+        self.event.eventId    = jsonData["eventId"] as String
+        self.event.type       = jsonData["type"] as String
+        self.event.priceRange = jsonData["priceRange"] as String
+        self.event.eventDates = jsonData["eventDates"] as NSArray
+        
+        self.eventTitleLabel.text = self.event.title
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.ticketTableView.reloadData()
         })
-
-
-        task.resume()
-    }
-
-    func setBannerImage(eventType: String) {
-        var img: UIImage
-
-        switch eventType {
-        case "Theatre":
-            img = UIImage(named: "event2.png")!
-
-        case "Concert":
-            img = UIImage(named: "event1.png")!
-
-        case "Sport":
-            img = UIImage(named: "event5.png")!
-
-        default:
-            img = UIImage(named: "event4.png")!
-        }
-        eventImage.image = img
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int { return 1 }

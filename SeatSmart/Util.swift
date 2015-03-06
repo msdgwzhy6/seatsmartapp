@@ -17,4 +17,20 @@ class Util {
             ),
             dispatch_get_main_queue(), closure)
     }
+    
+    class func getWebImage(imageUrl:String, callback: (result: UIImage)->()) {
+        let url = NSURL(string: imageUrl)
+        let urlRequest = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
+            response, data, error in
+            
+            if error == nil {
+                println("There was an error")
+            } else {                
+                var image = UIImage(data: data)
+                callback(result: image!)
+            }
+        })
+    }
 }
