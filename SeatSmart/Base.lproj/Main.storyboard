@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="gG7-I2-vJV">
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="gG7-I2-vJV">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -860,7 +860,7 @@
         <image name="settings-icon.png" width="35" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="guW-av-eUE"/>
         <segue reference="VOw-v5-JCM"/>
+        <segue reference="J90-Id-a6o"/>
     </inferredMetricsTieBreakers>
 </document>

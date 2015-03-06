@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1909764F1AAA16A6005836F7 /* event7.png in Resources */ = {isa = PBXBuildFile; fileRef = 190976491AAA16A6005836F7 /* event7.png */; };
+		190976501AAA16A6005836F7 /* event8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764A1AAA16A6005836F7 /* event8.png */; };
+		190976511AAA16A6005836F7 /* search-result1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764B1AAA16A6005836F7 /* search-result1.png */; };
+		190976521AAA16A6005836F7 /* search-result2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764C1AAA16A6005836F7 /* search-result2.png */; };
+		190976531AAA16A6005836F7 /* search-result3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764D1AAA16A6005836F7 /* search-result3.png */; };
+		190976541AAA16A6005836F7 /* search-result4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764E1AAA16A6005836F7 /* search-result4.png */; };
+		190976561AAA1FAF005836F7 /* OAuthRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190976551AAA1FAF005836F7 /* OAuthRest.swift */; };
 		195E85A71AA56CBA003C95EC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E85A61AA56CBA003C95EC /* Util.swift */; };
 		1966C2C11A91B20000FB0BC7 /* background-landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */; };
 		1966C2C21A91B20000FB0BC7 /* background-landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */; };
@@ -187,6 +194,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190976491AAA16A6005836F7 /* event7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event7.png; sourceTree = "<group>"; };
+		1909764A1AAA16A6005836F7 /* event8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event8.png; sourceTree = "<group>"; };
+		1909764B1AAA16A6005836F7 /* search-result1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result1.png"; sourceTree = "<group>"; };
+		1909764C1AAA16A6005836F7 /* search-result2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result2.png"; sourceTree = "<group>"; };
+		1909764D1AAA16A6005836F7 /* search-result3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result3.png"; sourceTree = "<group>"; };
+		1909764E1AAA16A6005836F7 /* search-result4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result4.png"; sourceTree = "<group>"; };
+		190976551AAA1FAF005836F7 /* OAuthRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthRest.swift; sourceTree = "<group>"; };
 		195E85A61AA56CBA003C95EC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape~ipad.png"; sourceTree = "<group>"; };
@@ -391,6 +405,7 @@
 				195E85A61AA56CBA003C95EC /* Util.swift */,
 				C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */,
 				C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */,
+				190976551AAA1FAF005836F7 /* OAuthRest.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -575,6 +590,12 @@
 		19945A461A9AD545008A7955 /* eventsimages */ = {
 			isa = PBXGroup;
 			children = (
+				190976491AAA16A6005836F7 /* event7.png */,
+				1909764A1AAA16A6005836F7 /* event8.png */,
+				1909764B1AAA16A6005836F7 /* search-result1.png */,
+				1909764C1AAA16A6005836F7 /* search-result2.png */,
+				1909764D1AAA16A6005836F7 /* search-result3.png */,
+				1909764E1AAA16A6005836F7 /* search-result4.png */,
 				19C78E371AA91B3000F6B1F3 /* event6.png */,
 				19945A4F1A9AD90B008A7955 /* event5.png */,
 				19945A471A9AD545008A7955 /* event1.png */,
@@ -775,6 +796,7 @@
 				1966C33F1A91B20000FB0BC7 /* tabbar-tab3@2x.png in Resources */,
 				1966C2CA1A91B20000FB0BC7 /* list-item-cover1~ipad.png in Resources */,
 				1966C2ED1A91B20000FB0BC7 /* button-pressed.png in Resources */,
+				1909764F1AAA16A6005836F7 /* event7.png in Resources */,
 				1966C2D91A91B20000FB0BC7 /* tabbar-tab1@2x~ipad.png in Resources */,
 				1966C32A1A91B20000FB0BC7 /* progressProgress.png in Resources */,
 				1966C32F1A91B20000FB0BC7 /* sliderMaxTrack@2x.png in Resources */,
@@ -799,6 +821,7 @@
 				1966C30B1A91B20000FB0BC7 /* list-item-cover1@2x.png in Resources */,
 				1966C2D51A91B20000FB0BC7 /* list-item-value@2x~ipad.png in Resources */,
 				1966C32D1A91B20000FB0BC7 /* progressTrack@2x.png in Resources */,
+				190976521AAA16A6005836F7 /* search-result2.png in Resources */,
 				1966C3081A91B20000FB0BC7 /* list-item-calendar.png in Resources */,
 				1966C2CE1A91B20000FB0BC7 /* list-item-cover3~ipad.png in Resources */,
 				1966C2D01A91B20000FB0BC7 /* list-item-cover4~ipad.png in Resources */,
@@ -817,8 +840,10 @@
 				1966C32B1A91B20000FB0BC7 /* progressProgress@2x.png in Resources */,
 				1966C2C31A91B20000FB0BC7 /* background@2x~ipad.png in Resources */,
 				1966C3351A91B20000FB0BC7 /* switchHandle@2x.png in Resources */,
+				190976501AAA16A6005836F7 /* event8.png in Resources */,
 				1966C2F61A91B20000FB0BC7 /* details-item-cover1.png in Resources */,
 				1966C31F1A91B20000FB0BC7 /* login-icon-pass@2x.png in Resources */,
+				190976531AAA16A6005836F7 /* search-result3.png in Resources */,
 				1966C33C1A91B20000FB0BC7 /* tabbar-tab2.png in Resources */,
 				19C78E381AA91B3100F6B1F3 /* event6.png in Resources */,
 				1966C30F1A91B20000FB0BC7 /* list-item-cover3@2x.png in Resources */,
@@ -842,6 +867,7 @@
 				1966C3221A91B20000FB0BC7 /* navigation-item-icon2.png in Resources */,
 				1966C2E61A91B20000FB0BC7 /* backButton@2x.png in Resources */,
 				19945A4B1A9AD545008A7955 /* event1.png in Resources */,
+				190976541AAA16A6005836F7 /* search-result4.png in Resources */,
 				1966C2E51A91B20000FB0BC7 /* backButton.png in Resources */,
 				1966C2F31A91B20000FB0BC7 /* Default@2x.png in Resources */,
 				1966C2EB1A91B20000FB0BC7 /* bg-login.png in Resources */,
@@ -869,6 +895,7 @@
 				1966C3411A91B20000FB0BC7 /* tabbar-tab4@2x.png in Resources */,
 				1966C2F21A91B20000FB0BC7 /* Default.png in Resources */,
 				1966C3311A91B20000FB0BC7 /* sliderMinTrack@2x.png in Resources */,
+				190976511AAA16A6005836F7 /* search-result1.png in Resources */,
 				1966C2D61A91B20000FB0BC7 /* list-item-value~ipad.png in Resources */,
 				1966C30D1A91B20000FB0BC7 /* list-item-cover2@2x.png in Resources */,
 				1966C2EA1A91B20000FB0BC7 /* bg-login-568h@2x.png in Resources */,
@@ -928,6 +955,7 @@
 			files = (
 				C5AA7C211AA7824A00C3BDD0 /* eventDateCell.swift in Sources */,
 				C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */,
+				190976561AAA1FAF005836F7 /* OAuthRest.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				195E85A71AA56CBA003C95EC /* Util.swift in Sources */,
 				C63A6D531AA7C85B0062A426 /* SeatSmartConfig.swift in Sources */,
@@ -1064,6 +1092,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

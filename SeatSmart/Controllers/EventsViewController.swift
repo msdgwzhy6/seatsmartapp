@@ -12,12 +12,13 @@ import Foundation
 var selectedEventRow:Int = 0
 var eventItems = [EventItem]()
 
-class EventsViewController: UITableViewController, UISearchBarDelegate {
+class EventsViewController: UITableViewController, UITableViewDelegate, UISearchBarDelegate {
     @IBOutlet var eventsTableView: UITableView!
     @IBOutlet weak var searchTextField: UISearchBar!
     
     var searchActive : Bool = false
     var searchIsTyping : Bool = false
+    var userSearched : Bool = false
     let seatsmartApi = SeatSmartApi()
     
     func loadInitialData() {
@@ -32,6 +33,7 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         self.loadInitialData()
         self.searchTextField.delegate = self
+        self.eventsTableView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +45,7 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
 
         var jsonData : NSArray = responseData as NSArray
         
-        eventItems.removeAll();
+        eventItems.removeAll()
         for item: AnyObject in jsonData {
             
             var eventItem       = EventItem(fromString: item["title"] as String)
@@ -62,35 +64,48 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         })
     }
     
+    func dismissKeyboard() {
+        self.view.endEditing(true)
+        self.searchTextField.resignFirstResponder()
+    }
+    
     // MARK: - Search bar functions
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        searchActive = true;
+        searchActive = true
     }
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        searchActive = false;
+        println("searched ended editing")
+        self.dismissKeyboard()
+        searchActive = false
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        searchActive = false;
+        println("searched button cancel clicked")
+        searchActive = false
+        self.dismissKeyboard()
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchActive = false;
+        searchActive = false
         println("searched button clicked")
+        self.dismissKeyboard()
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
+        self.userSearched = true
         var filter = "seatsmart-test-searchresults.json"
         if (searchText == "") {
+            self.userSearched = false
             filter = "seatsmart-test-data.json"
         }
         println("Search for " + searchText)
-        //eventItems.removeAll();
         self.seatsmartApi.getEvents(filter, self.handleGetEvents)
     }
+    
+    // MARK - tableview funcs
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -103,8 +118,18 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventItemPrototypeCell", forIndexPath: indexPath) as UITableViewCell
         
+        var imageName = "event"
+        if (self.userSearched) {
+            imageName = "search-result"
+        }
+        
+        var imageIndex = indexPath.row + 1
+        if (imageIndex > 8) {
+            imageIndex -= 8
+        }
+        
         cell.backgroundColor = UIColor.clearColor()
-        cell.backgroundView = UIImageView(image: UIImage(named: "event\(indexPath.row + 1)"))
+        cell.backgroundView = UIImageView(image: UIImage(named: "\(imageName)\(imageIndex)"))
         cell.textLabel?.textColor = UIColor.whiteColor()
         
         if (eventItems.count >= indexPath.row + 1) {
