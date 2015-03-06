@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1909764F1AAA16A6005836F7 /* event7.png in Resources */ = {isa = PBXBuildFile; fileRef = 190976491AAA16A6005836F7 /* event7.png */; };
+		190976501AAA16A6005836F7 /* event8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764A1AAA16A6005836F7 /* event8.png */; };
+		190976511AAA16A6005836F7 /* search-result1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764B1AAA16A6005836F7 /* search-result1.png */; };
+		190976521AAA16A6005836F7 /* search-result2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764C1AAA16A6005836F7 /* search-result2.png */; };
+		190976531AAA16A6005836F7 /* search-result3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764D1AAA16A6005836F7 /* search-result3.png */; };
+		190976541AAA16A6005836F7 /* search-result4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764E1AAA16A6005836F7 /* search-result4.png */; };
+		190976561AAA1FAF005836F7 /* OAuthRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190976551AAA1FAF005836F7 /* OAuthRest.swift */; };
 		195E85A71AA56CBA003C95EC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E85A61AA56CBA003C95EC /* Util.swift */; };
 		1966C2C11A91B20000FB0BC7 /* background-landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */; };
 		1966C2C21A91B20000FB0BC7 /* background-landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */; };
@@ -153,6 +160,8 @@
 		19945A541A9ADDB8008A7955 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A531A9ADDB8008A7955 /* settings-icon.png */; };
 		19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19945A551A9ADE4B008A7955 /* LoginViewController.swift */; };
 		19945A581A9AEAB0008A7955 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A571A9AEAB0008A7955 /* splash.png */; };
+		19C78E361AA90E6B00F6B1F3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */; };
+		19C78E381AA91B3100F6B1F3 /* event6.png in Resources */ = {isa = PBXBuildFile; fileRef = 19C78E371AA91B3000F6B1F3 /* event6.png */; };
 		19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22281A90FA14003C9DFE /* AppDelegate.swift */; };
 		19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19CE222A1A90FA14003C9DFE /* SeatSmart.xcdatamodeld */; };
 		19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CE222F1A90FA15003C9DFE /* Main.storyboard */; };
@@ -171,6 +180,8 @@
 		C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */; };
 		C5AA7C211AA7824A00C3BDD0 /* eventDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA7C201AA7824A00C3BDD0 /* eventDateCell.swift */; };
 		C5F8A8151AA0EFA300EF4452 /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8A8141AA0EFA300EF4452 /* EventDate.swift */; };
+		C63A6D511AA7C60E0062A426 /* SeatSmartApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */; };
+		C63A6D531AA7C85B0062A426 /* SeatSmartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +195,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190976491AAA16A6005836F7 /* event7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event7.png; sourceTree = "<group>"; };
+		1909764A1AAA16A6005836F7 /* event8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event8.png; sourceTree = "<group>"; };
+		1909764B1AAA16A6005836F7 /* search-result1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result1.png"; sourceTree = "<group>"; };
+		1909764C1AAA16A6005836F7 /* search-result2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result2.png"; sourceTree = "<group>"; };
+		1909764D1AAA16A6005836F7 /* search-result3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result3.png"; sourceTree = "<group>"; };
+		1909764E1AAA16A6005836F7 /* search-result4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result4.png"; sourceTree = "<group>"; };
+		190976551AAA1FAF005836F7 /* OAuthRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthRest.swift; sourceTree = "<group>"; };
 		195E85A61AA56CBA003C95EC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape~ipad.png"; sourceTree = "<group>"; };
@@ -330,6 +348,8 @@
 		19945A531A9ADDB8008A7955 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
 		19945A551A9ADE4B008A7955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		19945A571A9AEAB0008A7955 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		19C78E371AA91B3000F6B1F3 /* event6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event6.png; sourceTree = "<group>"; };
 		19CE22231A90FA14003C9DFE /* SeatSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CE22271A90FA14003C9DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CE22281A90FA14003C9DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -352,6 +372,9 @@
 		C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeatViewController.swift; path = Controllers/SeatViewController.swift; sourceTree = "<group>"; };
 		C5AA7C201AA7824A00C3BDD0 /* eventDateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventDateCell.swift; sourceTree = "<group>"; };
 		C5F8A8141AA0EFA300EF4452 /* EventDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDate.swift; path = Models/EventDate.swift; sourceTree = "<group>"; };
+		C63A6D4F1AA7C1270062A426 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatSmartApi.swift; sourceTree = "<group>"; };
+		C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatSmartConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +387,7 @@
 				1966C34C1A91B3B100FB0BC7 /* MapKit.framework in Frameworks */,
 				1966C34A1A91B3A800FB0BC7 /* QuartzCore.framework in Frameworks */,
 				1966C3481A91B39D00FB0BC7 /* CoreImage.framework in Frameworks */,
+				19C78E361AA90E6B00F6B1F3 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +405,9 @@
 			isa = PBXGroup;
 			children = (
 				195E85A61AA56CBA003C95EC /* Util.swift */,
+				C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */,
+				C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */,
+				190976551AAA1FAF005836F7 /* OAuthRest.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -565,6 +592,13 @@
 		19945A461A9AD545008A7955 /* eventsimages */ = {
 			isa = PBXGroup;
 			children = (
+				190976491AAA16A6005836F7 /* event7.png */,
+				1909764A1AAA16A6005836F7 /* event8.png */,
+				1909764B1AAA16A6005836F7 /* search-result1.png */,
+				1909764C1AAA16A6005836F7 /* search-result2.png */,
+				1909764D1AAA16A6005836F7 /* search-result3.png */,
+				1909764E1AAA16A6005836F7 /* search-result4.png */,
+				19C78E371AA91B3000F6B1F3 /* event6.png */,
 				19945A4F1A9AD90B008A7955 /* event5.png */,
 				19945A471A9AD545008A7955 /* event1.png */,
 				19945A481A9AD545008A7955 /* event2.png */,
@@ -577,6 +611,7 @@
 		19CE221A1A90FA14003C9DFE = {
 			isa = PBXGroup;
 			children = (
+				19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */,
 				1966C34F1A91B3D200FB0BC7 /* CoreGraphics.framework */,
 				1966C34D1A91B3BA00FB0BC7 /* UIKit.framework */,
 				1966C34B1A91B3B100FB0BC7 /* MapKit.framework */,
@@ -612,6 +647,7 @@
 				19CE22321A90FA15003C9DFE /* Images.xcassets */,
 				19CE22341A90FA15003C9DFE /* LaunchScreen.xib */,
 				19CE22261A90FA14003C9DFE /* Supporting Files */,
+				C63A6D4F1AA7C1270062A426 /* Bridge-Header.h */,
 			);
 			path = SeatSmart;
 			sourceTree = "<group>";
@@ -763,6 +799,7 @@
 				1966C33F1A91B20000FB0BC7 /* tabbar-tab3@2x.png in Resources */,
 				1966C2CA1A91B20000FB0BC7 /* list-item-cover1~ipad.png in Resources */,
 				1966C2ED1A91B20000FB0BC7 /* button-pressed.png in Resources */,
+				1909764F1AAA16A6005836F7 /* event7.png in Resources */,
 				1966C2D91A91B20000FB0BC7 /* tabbar-tab1@2x~ipad.png in Resources */,
 				1966C32A1A91B20000FB0BC7 /* progressProgress.png in Resources */,
 				1966C32F1A91B20000FB0BC7 /* sliderMaxTrack@2x.png in Resources */,
@@ -787,6 +824,7 @@
 				1966C30B1A91B20000FB0BC7 /* list-item-cover1@2x.png in Resources */,
 				1966C2D51A91B20000FB0BC7 /* list-item-value@2x~ipad.png in Resources */,
 				1966C32D1A91B20000FB0BC7 /* progressTrack@2x.png in Resources */,
+				190976521AAA16A6005836F7 /* search-result2.png in Resources */,
 				1966C3081A91B20000FB0BC7 /* list-item-calendar.png in Resources */,
 				1966C2CE1A91B20000FB0BC7 /* list-item-cover3~ipad.png in Resources */,
 				1966C2D01A91B20000FB0BC7 /* list-item-cover4~ipad.png in Resources */,
@@ -805,9 +843,12 @@
 				1966C32B1A91B20000FB0BC7 /* progressProgress@2x.png in Resources */,
 				1966C2C31A91B20000FB0BC7 /* background@2x~ipad.png in Resources */,
 				1966C3351A91B20000FB0BC7 /* switchHandle@2x.png in Resources */,
+				190976501AAA16A6005836F7 /* event8.png in Resources */,
 				1966C2F61A91B20000FB0BC7 /* details-item-cover1.png in Resources */,
 				1966C31F1A91B20000FB0BC7 /* login-icon-pass@2x.png in Resources */,
+				190976531AAA16A6005836F7 /* search-result3.png in Resources */,
 				1966C33C1A91B20000FB0BC7 /* tabbar-tab2.png in Resources */,
+				19C78E381AA91B3100F6B1F3 /* event6.png in Resources */,
 				1966C30F1A91B20000FB0BC7 /* list-item-cover3@2x.png in Resources */,
 				1966C33E1A91B20000FB0BC7 /* tabbar-tab3.png in Resources */,
 				1966C30C1A91B20000FB0BC7 /* list-item-cover2.png in Resources */,
@@ -829,6 +870,7 @@
 				1966C3221A91B20000FB0BC7 /* navigation-item-icon2.png in Resources */,
 				1966C2E61A91B20000FB0BC7 /* backButton@2x.png in Resources */,
 				19945A4B1A9AD545008A7955 /* event1.png in Resources */,
+				190976541AAA16A6005836F7 /* search-result4.png in Resources */,
 				1966C2E51A91B20000FB0BC7 /* backButton.png in Resources */,
 				1966C2F31A91B20000FB0BC7 /* Default@2x.png in Resources */,
 				1966C2EB1A91B20000FB0BC7 /* bg-login.png in Resources */,
@@ -856,6 +898,7 @@
 				1966C3411A91B20000FB0BC7 /* tabbar-tab4@2x.png in Resources */,
 				1966C2F21A91B20000FB0BC7 /* Default.png in Resources */,
 				1966C3311A91B20000FB0BC7 /* sliderMinTrack@2x.png in Resources */,
+				190976511AAA16A6005836F7 /* search-result1.png in Resources */,
 				1966C2D61A91B20000FB0BC7 /* list-item-value~ipad.png in Resources */,
 				1966C30D1A91B20000FB0BC7 /* list-item-cover2@2x.png in Resources */,
 				1966C2EA1A91B20000FB0BC7 /* bg-login-568h@2x.png in Resources */,
@@ -915,11 +958,14 @@
 			files = (
 				C5AA7C211AA7824A00C3BDD0 /* eventDateCell.swift in Sources */,
 				C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */,
+				190976561AAA1FAF005836F7 /* OAuthRest.swift in Sources */,
 				C5785D6D1AAA0BA600D50571 /* EventTicket.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				195E85A71AA56CBA003C95EC /* Util.swift in Sources */,
+				C63A6D531AA7C85B0062A426 /* SeatSmartConfig.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
 				19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */,
+				C63A6D511AA7C60E0062A426 /* SeatSmartApi.swift in Sources */,
 				C53979871AA7B52C008C9A07 /* seatCell.swift in Sources */,
 				19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */,
 				19CE22531A91143B003C9DFE /* EventItem.swift in Sources */,
@@ -1050,9 +1096,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/outsider/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = SeatSmart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SeatSmart/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -1060,9 +1113,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/outsider/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = SeatSmart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SeatSmart/Bridge-Header.h";
 			};
 			name = Release;
 		};

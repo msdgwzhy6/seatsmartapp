@@ -12,17 +12,19 @@ import Foundation
 var selectedEventRow:Int = 0
 var eventItems = [EventItem]()
 
-class EventsViewController: UITableViewController, UISearchBarDelegate {
+class EventsViewController: UITableViewController, UITableViewDelegate, UISearchBarDelegate {
     @IBOutlet var eventsTableView: UITableView!
     @IBOutlet weak var searchTextField: UISearchBar!
     
     var searchActive : Bool = false
     var searchIsTyping : Bool = false
+    var userSearched : Bool = false
+    let seatsmartApi = SeatSmartApi()
     
     func loadInitialData() {
         
-        let urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
-        self.loadTableDataFromUrl(urlPath)
+        self.seatsmartApi.getEvents("", self.handleGetEvents)
+        
         self.eventsTableView.rowHeight = 130
         self.eventsTableView.backgroundView = UIImageView(image: UIImage(named: "bg-login"))
     }
@@ -31,6 +33,7 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         self.loadInitialData()
         self.searchTextField.delegate = self
+        self.eventsTableView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,76 +41,71 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadTableDataFromUrl(urlPath: String) {
-        let url: NSURL = NSURL(string: urlPath)!
-        let session = NSURLSession.sharedSession()
+    func handleGetEvents(responseData : AnyObject) {
+
+        var jsonData : NSArray = responseData as NSArray
         
-        let task = session.dataTaskWithURL(url, completionHandler: {
-            data, response, error -> Void in
+        eventItems.removeAll()
+        for item: AnyObject in jsonData {
             
-            if((error) != nil) {
-                println(error.localizedDescription)
-            }
+            var eventItem       = EventItem(fromString: item["title"] as String)
             
-            var err: NSError?
+            eventItem.basePrice = item["basePrice"] as NSNumber
+            eventItem.date      = item["date"] as String
+            eventItem.latidude  = item["latitude"] as String
+            eventItem.longitude = item["longitude"] as String
+            eventItem.zip       = item["zip"] as String
             
-            var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSArray
-            
-            if(err != nil) {
-                println("JSON Error \(err!.localizedDescription)")
-            }
-            
-            eventItems.removeAll();
-            for item: AnyObject in jsonData {
-                
-                var eventItem       = EventItem(fromString: item["title"] as String)
-                
-                eventItem.basePrice = item["basePrice"] as NSNumber
-                eventItem.date      = item["date"] as String
-                eventItem.latidude  = item["latitude"] as String
-                eventItem.longitude = item["longitude"] as String
-                eventItem.zip       = item["zip"] as String
-                
-                eventItems.append(eventItem)
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.eventsTableView.reloadData()
-            })
+            eventItems.append(eventItem)
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.eventsTableView.reloadData()
         })
-        
-        task.resume()
+    }
+    
+    func dismissKeyboard() {
+        self.view.endEditing(true)
+        self.searchTextField.resignFirstResponder()
     }
     
     // MARK: - Search bar functions
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        searchActive = true;
+        searchActive = true
     }
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        searchActive = false;
+        println("searched ended editing")
+        self.dismissKeyboard()
+        searchActive = false
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        searchActive = false;
+        println("searched button cancel clicked")
+        searchActive = false
+        self.dismissKeyboard()
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchActive = false;
+        searchActive = false
+        println("searched button clicked")
+        self.dismissKeyboard()
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
-        Util.delay(0.5) {
-            var urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-searchresults.json"
-            if (searchText == "") {
-                urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
-            }
-            println("Search for " + searchText)
-            self.loadTableDataFromUrl(urlPath)
+        self.userSearched = true
+        var filter = "seatsmart-test-searchresults.json"
+        if (searchText == "") {
+            self.userSearched = false
+            filter = "seatsmart-test-data.json"
         }
+        println("Search for " + searchText)
+        self.seatsmartApi.getEvents(filter, self.handleGetEvents)
     }
+    
+    // MARK - tableview funcs
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -120,14 +118,25 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventItemPrototypeCell", forIndexPath: indexPath) as UITableViewCell
         
+        var imageName = "event"
+        if (self.userSearched) {
+            imageName = "search-result"
+        }
+        
+        var imageIndex = indexPath.row + 1
+        if (imageIndex > 8) {
+            imageIndex -= 8
+        }
+        
         cell.backgroundColor = UIColor.clearColor()
-        cell.backgroundView = UIImageView(image: UIImage(named: "event\(indexPath.row + 1)"))
+        cell.backgroundView = UIImageView(image: UIImage(named: "\(imageName)\(imageIndex)"))
         cell.textLabel?.textColor = UIColor.whiteColor()
         
-        let eventItem = eventItems[indexPath.row]
-        cell.textLabel?.text = eventItem.title
-        cell.detailTextLabel?.text = eventItem.date
-        
+        if (eventItems.count >= indexPath.row + 1) {
+            let eventItem = eventItems[indexPath.row]
+            cell.textLabel?.text = eventItem.title
+            cell.detailTextLabel?.text = eventItem.date
+        }
         return cell
     }
     
