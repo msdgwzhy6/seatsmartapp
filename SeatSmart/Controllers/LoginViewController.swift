@@ -8,14 +8,18 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBLoginViewDelegate {
     
     @IBOutlet weak var loginEmailField: UITextField!
     @IBOutlet weak var loginPasswordField: UITextField!
+    @IBOutlet var fbLoginView : FBLoginView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setFieldStyles()
+        
+        self.fbLoginView.delegate = self
+        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
     }
 
     func setFieldStyles() {
@@ -48,4 +52,24 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
 
+    // MARK - Facebook funcs
+    func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
+        println("User Logged In")
+        println("Perform a segue.")
+    }
+    
+    func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser){
+        println("User Facebook Id: \(user.objectID)")
+        println("Full Name: \(user.name)")
+        var userEmail = user.objectForKey("email") as String
+        println("User Email: \(userEmail)")
+    }
+    
+    func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
+        println("User Logged Out")
+    }
+    
+    func loginView(loginView : FBLoginView!, handleError:NSError) {
+        println("Error: \(handleError.localizedDescription)")
+    }
 }

@@ -18,11 +18,12 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
     
     var searchActive : Bool = false
     var searchIsTyping : Bool = false
+    let seatsmartApi = SeatSmartApi()
     
     func loadInitialData() {
         
-        let urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
-        self.loadTableDataFromUrl(urlPath)
+        self.seatsmartApi.getEvents("", self.handleGetEvents)
+        
         self.eventsTableView.rowHeight = 130
         self.eventsTableView.backgroundView = UIImageView(image: UIImage(named: "bg-login"))
     }
@@ -38,45 +39,27 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadTableDataFromUrl(urlPath: String) {
-        let url: NSURL = NSURL(string: urlPath)!
-        let session = NSURLSession.sharedSession()
+    func handleGetEvents(responseData : AnyObject) {
+
+        var jsonData : NSArray = responseData as NSArray
         
-        let task = session.dataTaskWithURL(url, completionHandler: {
-            data, response, error -> Void in
+        eventItems.removeAll();
+        for item: AnyObject in jsonData {
             
-            if((error) != nil) {
-                println(error.localizedDescription)
-            }
+            var eventItem       = EventItem(fromString: item["title"] as String)
             
-            var err: NSError?
+            eventItem.basePrice = item["basePrice"] as NSNumber
+            eventItem.date      = item["date"] as String
+            eventItem.latidude  = item["latitude"] as String
+            eventItem.longitude = item["longitude"] as String
+            eventItem.zip       = item["zip"] as String
             
-            var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSArray
-            
-            if(err != nil) {
-                println("JSON Error \(err!.localizedDescription)")
-            }
-            
-            eventItems.removeAll();
-            for item: AnyObject in jsonData {
-                
-                var eventItem       = EventItem(fromString: item["title"] as String)
-                
-                eventItem.basePrice = item["basePrice"] as NSNumber
-                eventItem.date      = item["date"] as String
-                eventItem.latidude  = item["latitude"] as String
-                eventItem.longitude = item["longitude"] as String
-                eventItem.zip       = item["zip"] as String
-                
-                eventItems.append(eventItem)
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.eventsTableView.reloadData()
-            })
+            eventItems.append(eventItem)
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.eventsTableView.reloadData()
         })
-        
-        task.resume()
     }
     
     // MARK: - Search bar functions
@@ -95,18 +78,18 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchActive = false;
+        println("searched button clicked")
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
-        Util.delay(0.5) {
-            var urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-searchresults.json"
-            if (searchText == "") {
-                urlPath = "http://outsidervc.com/seatsmart/seatsmart-test-data.json"
-            }
-            println("Search for " + searchText)
-            self.loadTableDataFromUrl(urlPath)
+        var filter = "seatsmart-test-searchresults.json"
+        if (searchText == "") {
+            filter = "seatsmart-test-data.json"
         }
+        println("Search for " + searchText)
+        //eventItems.removeAll();
+        self.seatsmartApi.getEvents(filter, self.handleGetEvents)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -124,10 +107,11 @@ class EventsViewController: UITableViewController, UISearchBarDelegate {
         cell.backgroundView = UIImageView(image: UIImage(named: "event\(indexPath.row + 1)"))
         cell.textLabel?.textColor = UIColor.whiteColor()
         
-        let eventItem = eventItems[indexPath.row]
-        cell.textLabel?.text = eventItem.title
-        cell.detailTextLabel?.text = eventItem.date
-        
+        if (eventItems.count >= indexPath.row + 1) {
+            let eventItem = eventItems[indexPath.row]
+            cell.textLabel?.text = eventItem.title
+            cell.detailTextLabel?.text = eventItem.date
+        }
         return cell
     }
     
