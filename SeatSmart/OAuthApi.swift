@@ -1,5 +1,5 @@
 //
-//  OAuthRest.swift
+//  OAuthApi.swift
 //  SeatSmart
 //
 //  Created by Huey Ly on 3/6/15.
@@ -8,11 +8,9 @@
 
 import Foundation
 
-class OAuthRest : NSObject {
+class OAuthApi : NSObject {
     
-    
-    
-    private func sendGet(urlPath: NSString, callback: (result: AnyObject)->()) {
+    func sendGet(urlPath: NSString, callback: (result: AnyObject)->()) {
         let url: NSURL = NSURL(string: urlPath)!
         let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
         var request = NSMutableURLRequest(URL: url, cachePolicy: cachePolicy, timeoutInterval: 2.0)
@@ -37,7 +35,7 @@ class OAuthRest : NSObject {
         task.resume()
     }
     
-    private func sendPost(urlPath: NSString, postData: NSString, callback: (result: AnyObject)->()) {
+    func sendPost(urlPath: NSString, postData: NSString, callback: (result: AnyObject)->()) {
         
         let url: NSURL = NSURL(string: urlPath)!
         let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData

@@ -13,7 +13,7 @@
 		190976521AAA16A6005836F7 /* search-result2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764C1AAA16A6005836F7 /* search-result2.png */; };
 		190976531AAA16A6005836F7 /* search-result3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764D1AAA16A6005836F7 /* search-result3.png */; };
 		190976541AAA16A6005836F7 /* search-result4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764E1AAA16A6005836F7 /* search-result4.png */; };
-		190976561AAA1FAF005836F7 /* OAuthRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190976551AAA1FAF005836F7 /* OAuthRest.swift */; };
+		190976561AAA1FAF005836F7 /* OAuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190976551AAA1FAF005836F7 /* OAuthApi.swift */; };
 		195E85A71AA56CBA003C95EC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E85A61AA56CBA003C95EC /* Util.swift */; };
 		1966C2C11A91B20000FB0BC7 /* background-landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */; };
 		1966C2C21A91B20000FB0BC7 /* background-landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */; };
@@ -201,7 +201,7 @@
 		1909764C1AAA16A6005836F7 /* search-result2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result2.png"; sourceTree = "<group>"; };
 		1909764D1AAA16A6005836F7 /* search-result3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result3.png"; sourceTree = "<group>"; };
 		1909764E1AAA16A6005836F7 /* search-result4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result4.png"; sourceTree = "<group>"; };
-		190976551AAA1FAF005836F7 /* OAuthRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthRest.swift; sourceTree = "<group>"; };
+		190976551AAA1FAF005836F7 /* OAuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthApi.swift; sourceTree = "<group>"; };
 		195E85A61AA56CBA003C95EC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape~ipad.png"; sourceTree = "<group>"; };
@@ -407,7 +407,7 @@
 				195E85A61AA56CBA003C95EC /* Util.swift */,
 				C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */,
 				C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */,
-				190976551AAA1FAF005836F7 /* OAuthRest.swift */,
+				190976551AAA1FAF005836F7 /* OAuthApi.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -958,7 +958,7 @@
 			files = (
 				C5AA7C211AA7824A00C3BDD0 /* eventDateCell.swift in Sources */,
 				C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */,
-				190976561AAA1FAF005836F7 /* OAuthRest.swift in Sources */,
+				190976561AAA1FAF005836F7 /* OAuthApi.swift in Sources */,
 				C5785D6D1AAA0BA600D50571 /* EventTicket.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				195E85A71AA56CBA003C95EC /* Util.swift in Sources */,

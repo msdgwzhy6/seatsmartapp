@@ -40,15 +40,13 @@ class RegisterViewController: UIViewController {
         var fullname = self.fullNameField.text
         var email = self.emailField.text
         var password = self.passwordField.text
-        var zipcode = self.zipcodeField.text
             
         println("Register submitted: ")
         println(fullname)
         println(email)
         println(password)
-        println(zipcode)
         
-        self.seatsmartApi.registerUser(fullname, email: email, zipcode: zipcode, self.handlePostSubmitted)
+        self.seatsmartApi.registerUser(fullname, email: email, self.handlePostSubmitted)
             
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
