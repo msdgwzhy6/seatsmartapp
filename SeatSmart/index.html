@@ -4,19 +4,19 @@
     <!--*******************************************************
 	**********************Required Includes********************
 	********************************************************-->
-	<link type="text/css" rel="stylesheet" href="css/tuMap.css" />
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.tuMap-min.js"></script>
-    <script type="text/javascript" src="js/jquery.hammer.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="tuMap.css" />
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="jquery.tuMap-min.js"></script>
+    <script type="text/javascript" src="jquery.hammer.min.js"></script>
 
 
 	<!--*******************************************************
 	**********************FOR DEMO ONLY************************
 	********************************************************-->
-    <link href="css/font-face.css" rel="stylesheet" type="text/css" /><!-- Custom Web Font(RobotoLight) Used For Demo -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" /><!-- Custom Style Sheet Used For Demo to Customize list, Search Bar etc. -->
-    <script type="text/javascript" src="js/Data.js"></script><!-- Min Price, Max Price, Tickets Count, Tickets Array -->
-    <script type="text/javascript" src="js/Demo.js"></script><!-- Common Functions like Show List Loading, Set Height etc. -->
+    <link href="font-face.css" rel="stylesheet" type="text/css" /><!-- Custom Web Font(RobotoLight) Used For Demo -->
+    <link href="style.css" rel="stylesheet" type="text/css" /><!-- Custom Style Sheet Used For Demo to Customize list, Search Bar etc. -->
+    <script type="text/javascript" src="Data.js"></script><!-- Min Price, Max Price, Tickets Count, Tickets Array -->
+    <script type="text/javascript" src="Demo.js"></script><!-- Common Functions like Show List Loading, Set Height etc. -->
 </head>
 <body>
     <h1>TEST</h1>
@@ -83,7 +83,12 @@
         Initialize Ticket Utils Interactive Map
         ************************************************************/
             $("#MapContainer").tuMap({
-                MapId: "dc7c9452-913a-44d8-b820-7b46f03e2712"
+                 MapId:  ""
+                 , EventInfo: {
+                     Venue: "Madison Square Garden",
+                     EventName: "Ariana Grande",
+                     EventDate: "2015-03-21T19:30"
+                 }
                 , MapType: "Interactive"
                 , ControlsPosition: "Outside"
                 , ColorScheme: 1
