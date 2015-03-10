@@ -9,61 +9,45 @@
 import UIKit
 import WebKit
 
-class SeatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate {
+class SeatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate, WKScriptMessageHandler {
 
     var ticket: EventTicket!
-    
+    let seatSmartApi = SeatSmartApi()
+
+    @IBOutlet var containerView : UIView! = nil //may not be needed
+
     @IBOutlet weak var seatTableView: UITableView!
     @IBOutlet weak var seatingChartWebView: UIWebView!
 
     override func loadView() {
-        super.loadView()
-//        self.seatingChartWebView = WKWebView(frame: )
-//        self.view = self.seatingChartWebView
-    }
+        super.loadView()    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadInitialData()
-        
-        var url = NSURL(string:"http://outsidervc.com/seatsmart/sample-theatre.png")
-        var req = NSURLRequest(URL:url!)
-        self.seatingChartWebView!.loadRequest(req)
+        self.seatSmartApi.getEvents("test_event_tickets.json", self.handleGetEvents)
+        let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+        var requestURL = NSURL(string:path!);
+        var req = NSURLRequest(URL:requestURL!);
+
+        self.seatingChartWebView.loadRequest(req)
 
     }
 
-    func loadInitialData() {
+    func handleGetEvents(responseData : AnyObject) {
+        var jsonData : AnyObject = responseData
 
-        let urlPath = "http://outsidervc.com/seatsmart/test_event_tickets.json"
-        let url: NSURL = NSURL(string: urlPath)!
-        let session = NSURLSession.sharedSession()
+        self.ticket = EventTicket(fromString: jsonData["title"] as String)
 
-        let task = session.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
+        self.ticket.eventTickets = jsonData["eventTickets"] as NSArray
+        println(self.ticket)
 
-            if((error) != nil) {
-                println(error.localizedDescription)
-            }
-
-            var err: NSError?
-
-            var jsonData: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)!
-
-            if(err != nil) {
-                println("JSON Error \(err!.localizedDescription)")
-            }
-println(jsonData["title"])
-            self.ticket = EventTicket(fromString: jsonData["title"] as String)
-
-            self.ticket.eventTickets = jsonData["eventTickets"] as NSArray
-            println(self.ticket)
-
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.seatTableView.reloadData()
-            })
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.seatTableView.reloadData()
         })
+    }
 
+    func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
 
-        task.resume()
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int { return 1 }
@@ -84,7 +68,7 @@ println(jsonData["title"])
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //tapping a seat should go to next view
+        //tapping a seat should highight the seat on the seating chart
     }
 
     override func didReceiveMemoryWarning() {
