@@ -175,6 +175,16 @@
 		19ECD8F41A9AB53400AE8409 /* seatsmart-test-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 19ECD8F31A9AB53300AE8409 /* seatsmart-test-data.json */; };
 		19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F59E501A9B027000024C93 /* RegisterViewController.swift */; };
 		19F59E531A9B0C8900024C93 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F59E521A9B0C8900024C93 /* app-icon.png */; };
+		C533A28D1AAF4FE100352154 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = C533A28C1AAF4FE100352154 /* index.html */; };
+		C533A2921AAF500500352154 /* font-face.css in Resources */ = {isa = PBXBuildFile; fileRef = C533A28F1AAF500500352154 /* font-face.css */; };
+		C533A2931AAF500500352154 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = C533A2901AAF500500352154 /* style.css */; };
+		C533A2941AAF500500352154 /* tuMap.css in Resources */ = {isa = PBXBuildFile; fileRef = C533A2911AAF500500352154 /* tuMap.css */; };
+		C533A29C1AAF501600352154 /* Data.js in Resources */ = {isa = PBXBuildFile; fileRef = C533A2961AAF501600352154 /* Data.js */; };
+		C533A29D1AAF501600352154 /* Demo.js in Resources */ = {isa = PBXBuildFile; fileRef = C533A2971AAF501600352154 /* Demo.js */; };
+		C533A29E1AAF501600352154 /* excanvas-min.js in Resources */ = {isa = PBXBuildFile; fileRef = C533A2981AAF501600352154 /* excanvas-min.js */; };
+		C533A29F1AAF501600352154 /* jquery-1.10.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = C533A2991AAF501600352154 /* jquery-1.10.2.min.js */; };
+		C533A2A01AAF501600352154 /* jquery.hammer.min.js in Resources */ = {isa = PBXBuildFile; fileRef = C533A29A1AAF501600352154 /* jquery.hammer.min.js */; };
+		C533A2A11AAF501600352154 /* jquery.tuMap-min.js in Resources */ = {isa = PBXBuildFile; fileRef = C533A29B1AAF501600352154 /* jquery.tuMap-min.js */; };
 		C53979871AA7B52C008C9A07 /* seatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53979861AA7B52B008C9A07 /* seatCell.swift */; };
 		C5785D6D1AAA0BA600D50571 /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5785D6C1AAA0BA600D50571 /* EventTicket.swift */; };
 		C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */; };
@@ -367,6 +377,16 @@
 		19ECD8F31A9AB53300AE8409 /* seatsmart-test-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "seatsmart-test-data.json"; sourceTree = "<group>"; };
 		19F59E501A9B027000024C93 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		19F59E521A9B0C8900024C93 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		C533A28C1AAF4FE100352154 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../SeatSmart/index.html; sourceTree = "<group>"; };
+		C533A28F1AAF500500352154 /* font-face.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "font-face.css"; sourceTree = "<group>"; };
+		C533A2901AAF500500352154 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		C533A2911AAF500500352154 /* tuMap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = tuMap.css; sourceTree = "<group>"; };
+		C533A2961AAF501600352154 /* Data.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Data.js; sourceTree = "<group>"; };
+		C533A2971AAF501600352154 /* Demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Demo.js; sourceTree = "<group>"; };
+		C533A2981AAF501600352154 /* excanvas-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "excanvas-min.js"; sourceTree = "<group>"; };
+		C533A2991AAF501600352154 /* jquery-1.10.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.10.2.min.js"; sourceTree = "<group>"; };
+		C533A29A1AAF501600352154 /* jquery.hammer.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.hammer.min.js; sourceTree = "<group>"; };
+		C533A29B1AAF501600352154 /* jquery.tuMap-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.tuMap-min.js"; sourceTree = "<group>"; };
 		C53979861AA7B52B008C9A07 /* seatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatCell.swift; sourceTree = "<group>"; };
 		C5785D6C1AAA0BA600D50571 /* EventTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTicket.swift; path = Models/EventTicket.swift; sourceTree = "<group>"; };
 		C5A8AFA21A9BE2BE007BD8B7 /* SeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeatViewController.swift; path = Controllers/SeatViewController.swift; sourceTree = "<group>"; };
@@ -415,6 +435,7 @@
 		1966C23A1A91B1DB00FB0BC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C533A2891AAF426400352154 /* www */,
 				1966C3441A91B21100FB0BC7 /* Data */,
 				1966C23B1A91B1FF00FB0BC7 /* Images */,
 			);
@@ -635,11 +656,9 @@
 		19CE22251A90FA14003C9DFE /* SeatSmart */ = {
 			isa = PBXGroup;
 			children = (
-				C5AA7C201AA7824A00C3BDD0 /* eventDateCell.swift */,
-				C53979861AA7B52B008C9A07 /* seatCell.swift */,
 				193CB9271AA6425C001C8F44 /* lib */,
 				1966C23A1A91B1DB00FB0BC7 /* Resources */,
-				19CE22511A911403003C9DFE /* Models */,
+				19CE22511A911403003C9DFE /* Classes */,
 				19CE224E1A90FF94003C9DFE /* Data */,
 				19CE224D1A90FF72003C9DFE /* Controllers */,
 				19CE22281A90FA14003C9DFE /* AppDelegate.swift */,
@@ -697,14 +716,52 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		19CE22511A911403003C9DFE /* Models */ = {
+		19CE22511A911403003C9DFE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C5AA7C201AA7824A00C3BDD0 /* eventDateCell.swift */,
+				C53979861AA7B52B008C9A07 /* seatCell.swift */,
 				19CE22521A91143B003C9DFE /* EventItem.swift */,
 				C5F8A8141AA0EFA300EF4452 /* EventDate.swift */,
 				C5785D6C1AAA0BA600D50571 /* EventTicket.swift */,
 			);
-			name = Models;
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C533A2891AAF426400352154 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				C533A2951AAF501600352154 /* js */,
+				C533A28E1AAF500500352154 /* css */,
+				C533A28C1AAF4FE100352154 /* index.html */,
+			);
+			name = www;
+			path = ../www;
+			sourceTree = "<group>";
+		};
+		C533A28E1AAF500500352154 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				C533A28F1AAF500500352154 /* font-face.css */,
+				C533A2901AAF500500352154 /* style.css */,
+				C533A2911AAF500500352154 /* tuMap.css */,
+			);
+			name = css;
+			path = ../SeatSmart/css;
+			sourceTree = "<group>";
+		};
+		C533A2951AAF501600352154 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				C533A2961AAF501600352154 /* Data.js */,
+				C533A2971AAF501600352154 /* Demo.js */,
+				C533A2981AAF501600352154 /* excanvas-min.js */,
+				C533A2991AAF501600352154 /* jquery-1.10.2.min.js */,
+				C533A29A1AAF501600352154 /* jquery.hammer.min.js */,
+				C533A29B1AAF501600352154 /* jquery.tuMap-min.js */,
+			);
+			name = js;
+			path = ../SeatSmart/js;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -798,8 +855,10 @@
 				1966C2DE1A91B20000FB0BC7 /* tabbar-tab3~ipad.png in Resources */,
 				1966C33F1A91B20000FB0BC7 /* tabbar-tab3@2x.png in Resources */,
 				1966C2CA1A91B20000FB0BC7 /* list-item-cover1~ipad.png in Resources */,
+				C533A2941AAF500500352154 /* tuMap.css in Resources */,
 				1966C2ED1A91B20000FB0BC7 /* button-pressed.png in Resources */,
 				1909764F1AAA16A6005836F7 /* event7.png in Resources */,
+				C533A2A01AAF501600352154 /* jquery.hammer.min.js in Resources */,
 				1966C2D91A91B20000FB0BC7 /* tabbar-tab1@2x~ipad.png in Resources */,
 				1966C32A1A91B20000FB0BC7 /* progressProgress.png in Resources */,
 				1966C32F1A91B20000FB0BC7 /* sliderMaxTrack@2x.png in Resources */,
@@ -816,6 +875,7 @@
 				1966C2F11A91B20000FB0BC7 /* Default-568h@2x.png in Resources */,
 				1966C3141A91B20000FB0BC7 /* list-item-pin.png in Resources */,
 				1966C3201A91B20000FB0BC7 /* navigation-item-icon1.png in Resources */,
+				C533A2921AAF500500352154 /* font-face.css in Resources */,
 				1966C2C51A91B20000FB0BC7 /* Default@2x~ipad.png in Resources */,
 				19CE22311A90FA15003C9DFE /* Main.storyboard in Resources */,
 				1966C2CF1A91B20000FB0BC7 /* list-item-cover4@2x~ipad.png in Resources */,
@@ -838,14 +898,17 @@
 				1966C2E91A91B20000FB0BC7 /* bg-login-568h.png in Resources */,
 				1966C2D71A91B20000FB0BC7 /* navigationBackground@2x~ipad.png in Resources */,
 				1966C3341A91B20000FB0BC7 /* switchHandle.png in Resources */,
+				C533A2A11AAF501600352154 /* jquery.tuMap-min.js in Resources */,
 				1966C2F41A91B20000FB0BC7 /* details-item-calendar.png in Resources */,
 				1966C2C61A91B20000FB0BC7 /* Default~ipad.png in Resources */,
 				1966C32B1A91B20000FB0BC7 /* progressProgress@2x.png in Resources */,
 				1966C2C31A91B20000FB0BC7 /* background@2x~ipad.png in Resources */,
 				1966C3351A91B20000FB0BC7 /* switchHandle@2x.png in Resources */,
+				C533A2931AAF500500352154 /* style.css in Resources */,
 				190976501AAA16A6005836F7 /* event8.png in Resources */,
 				1966C2F61A91B20000FB0BC7 /* details-item-cover1.png in Resources */,
 				1966C31F1A91B20000FB0BC7 /* login-icon-pass@2x.png in Resources */,
+				C533A29C1AAF501600352154 /* Data.js in Resources */,
 				190976531AAA16A6005836F7 /* search-result3.png in Resources */,
 				1966C33C1A91B20000FB0BC7 /* tabbar-tab2.png in Resources */,
 				19C78E381AA91B3100F6B1F3 /* event6.png in Resources */,
@@ -858,6 +921,7 @@
 				1966C31C1A91B20000FB0BC7 /* login-icon-email.png in Resources */,
 				19945A4C1A9AD545008A7955 /* event2.png in Resources */,
 				1966C2EF1A91B20000FB0BC7 /* button.png in Resources */,
+				C533A29D1AAF501600352154 /* Demo.js in Resources */,
 				1966C2E71A91B20000FB0BC7 /* barButton.png in Resources */,
 				1966C2FE1A91B20000FB0BC7 /* details-item-pin.png in Resources */,
 				1966C3461A91B21100FB0BC7 /* Locations.plist in Resources */,
@@ -871,6 +935,7 @@
 				1966C2E61A91B20000FB0BC7 /* backButton@2x.png in Resources */,
 				19945A4B1A9AD545008A7955 /* event1.png in Resources */,
 				190976541AAA16A6005836F7 /* search-result4.png in Resources */,
+				C533A28D1AAF4FE100352154 /* index.html in Resources */,
 				1966C2E51A91B20000FB0BC7 /* backButton.png in Resources */,
 				1966C2F31A91B20000FB0BC7 /* Default@2x.png in Resources */,
 				1966C2EB1A91B20000FB0BC7 /* bg-login.png in Resources */,
@@ -885,6 +950,7 @@
 				19945A581A9AEAB0008A7955 /* splash.png in Resources */,
 				19ECD8F41A9AB53400AE8409 /* seatsmart-test-data.json in Resources */,
 				1966C2C81A91B20000FB0BC7 /* list-item-calendar~ipad.png in Resources */,
+				C533A29E1AAF501600352154 /* excanvas-min.js in Resources */,
 				1966C2E01A91B20000FB0BC7 /* tabbar-tab4~ipad.png in Resources */,
 				1966C2FA1A91B20000FB0BC7 /* details-item-cover3.png in Resources */,
 				1966C3091A91B20000FB0BC7 /* list-item-calendar@2x.png in Resources */,
@@ -906,6 +972,7 @@
 				1966C2FF1A91B20000FB0BC7 /* details-item-pin@2x.png in Resources */,
 				1966C3271A91B20000FB0BC7 /* navigation-item-right-button@2x.png in Resources */,
 				1966C3241A91B20000FB0BC7 /* navigation-item-icon3.png in Resources */,
+				C533A29F1AAF501600352154 /* jquery-1.10.2.min.js in Resources */,
 				1966C2D21A91B20000FB0BC7 /* list-item-cover5~ipad.png in Resources */,
 				1966C3151A91B20000FB0BC7 /* list-item-pin@2x.png in Resources */,
 				1966C2DA1A91B20000FB0BC7 /* tabbar-tab1~ipad.png in Resources */,
