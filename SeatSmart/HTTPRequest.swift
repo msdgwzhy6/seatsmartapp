@@ -78,9 +78,8 @@ class HTTPRequest : NSObject {
         
     }
     
-    private func getEncryptedLoginString() -> String {
-        let username = "huey"
-        let password = "asdf"
+    private func getEncryptedLoginString(username: NSString, password: NSString) -> String {
+        
         let loginString = NSString(format: "%@:%@", username, password)
         let encryptedString = self.encryptString(loginString)
         
