@@ -13,7 +13,7 @@
 		190976521AAA16A6005836F7 /* search-result2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764C1AAA16A6005836F7 /* search-result2.png */; };
 		190976531AAA16A6005836F7 /* search-result3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764D1AAA16A6005836F7 /* search-result3.png */; };
 		190976541AAA16A6005836F7 /* search-result4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1909764E1AAA16A6005836F7 /* search-result4.png */; };
-		190976561AAA1FAF005836F7 /* OAuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190976551AAA1FAF005836F7 /* OAuthApi.swift */; };
+		190976561AAA1FAF005836F7 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190976551AAA1FAF005836F7 /* HTTPRequest.swift */; };
 		195E85A71AA56CBA003C95EC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E85A61AA56CBA003C95EC /* Util.swift */; };
 		1966C2C11A91B20000FB0BC7 /* background-landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */; };
 		1966C2C21A91B20000FB0BC7 /* background-landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */; };
@@ -160,6 +160,11 @@
 		19945A541A9ADDB8008A7955 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A531A9ADDB8008A7955 /* settings-icon.png */; };
 		19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19945A551A9ADE4B008A7955 /* LoginViewController.swift */; };
 		19945A581A9AEAB0008A7955 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 19945A571A9AEAB0008A7955 /* splash.png */; };
+		19AC58461AAEBACB007FEC2C /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC58451AAEBACB007FEC2C /* HTTPTask.swift */; };
+		19AC58481AAEBB2A007FEC2C /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC58471AAEBB2A007FEC2C /* HTTPRequestSerializer.swift */; };
+		19AC584A1AAEBD3A007FEC2C /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC58491AAEBD3A007FEC2C /* HTTPResponseSerializer.swift */; };
+		19AC584C1AAEBEC0007FEC2C /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC584B1AAEBEC0007FEC2C /* HTTPUpload.swift */; };
+		19C3ABE81AAF4D9400564951 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3ABE71AAF4D9400564951 /* JSONDecoder.swift */; };
 		19C78E361AA90E6B00F6B1F3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */; };
 		19C78E381AA91B3100F6B1F3 /* event6.png in Resources */ = {isa = PBXBuildFile; fileRef = 19C78E371AA91B3000F6B1F3 /* event6.png */; };
 		19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE22281A90FA14003C9DFE /* AppDelegate.swift */; };
@@ -201,7 +206,7 @@
 		1909764C1AAA16A6005836F7 /* search-result2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result2.png"; sourceTree = "<group>"; };
 		1909764D1AAA16A6005836F7 /* search-result3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result3.png"; sourceTree = "<group>"; };
 		1909764E1AAA16A6005836F7 /* search-result4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-result4.png"; sourceTree = "<group>"; };
-		190976551AAA1FAF005836F7 /* OAuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthApi.swift; sourceTree = "<group>"; };
+		190976551AAA1FAF005836F7 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		195E85A61AA56CBA003C95EC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1966C23D1A91B1FF00FB0BC7 /* background-landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		1966C23E1A91B1FF00FB0BC7 /* background-landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-landscape~ipad.png"; sourceTree = "<group>"; };
@@ -348,6 +353,11 @@
 		19945A531A9ADDB8008A7955 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
 		19945A551A9ADE4B008A7955 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		19945A571A9AEAB0008A7955 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		19AC58451AAEBACB007FEC2C /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		19AC58471AAEBB2A007FEC2C /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
+		19AC58491AAEBD3A007FEC2C /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
+		19AC584B1AAEBEC0007FEC2C /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
+		19C3ABE71AAF4D9400564951 /* JSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		19C78E351AA90E6B00F6B1F3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		19C78E371AA91B3000F6B1F3 /* event6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event6.png; sourceTree = "<group>"; };
 		19CE22231A90FA14003C9DFE /* SeatSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,7 +417,12 @@
 				195E85A61AA56CBA003C95EC /* Util.swift */,
 				C63A6D501AA7C60E0062A426 /* SeatSmartApi.swift */,
 				C63A6D521AA7C85B0062A426 /* SeatSmartConfig.swift */,
-				190976551AAA1FAF005836F7 /* OAuthApi.swift */,
+				190976551AAA1FAF005836F7 /* HTTPRequest.swift */,
+				19AC58451AAEBACB007FEC2C /* HTTPTask.swift */,
+				19AC58471AAEBB2A007FEC2C /* HTTPRequestSerializer.swift */,
+				19AC58491AAEBD3A007FEC2C /* HTTPResponseSerializer.swift */,
+				19AC584B1AAEBEC0007FEC2C /* HTTPUpload.swift */,
+				19C3ABE71AAF4D9400564951 /* JSONDecoder.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -956,19 +971,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AC58461AAEBACB007FEC2C /* HTTPTask.swift in Sources */,
 				C5AA7C211AA7824A00C3BDD0 /* eventDateCell.swift in Sources */,
 				C5A8AFA31A9BE2BE007BD8B7 /* SeatViewController.swift in Sources */,
-				190976561AAA1FAF005836F7 /* OAuthApi.swift in Sources */,
+				190976561AAA1FAF005836F7 /* HTTPRequest.swift in Sources */,
 				C5785D6D1AAA0BA600D50571 /* EventTicket.swift in Sources */,
+				19AC584A1AAEBD3A007FEC2C /* HTTPResponseSerializer.swift in Sources */,
+				19C3ABE81AAF4D9400564951 /* JSONDecoder.swift in Sources */,
 				19CE224C1A90FF67003C9DFE /* EventsViewController.swift in Sources */,
 				195E85A71AA56CBA003C95EC /* Util.swift in Sources */,
 				C63A6D531AA7C85B0062A426 /* SeatSmartConfig.swift in Sources */,
 				19CE222C1A90FA15003C9DFE /* SeatSmart.xcdatamodeld in Sources */,
+				19AC58481AAEBB2A007FEC2C /* HTTPRequestSerializer.swift in Sources */,
 				19945A561A9ADE4B008A7955 /* LoginViewController.swift in Sources */,
 				C63A6D511AA7C60E0062A426 /* SeatSmartApi.swift in Sources */,
 				C53979871AA7B52C008C9A07 /* seatCell.swift in Sources */,
 				19F59E511A9B027000024C93 /* RegisterViewController.swift in Sources */,
 				19CE22531A91143B003C9DFE /* EventItem.swift in Sources */,
+				19AC584C1AAEBEC0007FEC2C /* HTTPUpload.swift in Sources */,
 				C5F8A8151AA0EFA300EF4452 /* EventDate.swift in Sources */,
 				19CE22291A90FA14003C9DFE /* AppDelegate.swift in Sources */,
 				19CE22501A90FFCC003C9DFE /* EventDetailsController.swift in Sources */,

@@ -14,6 +14,8 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet weak var loginPasswordField: UITextField!
     @IBOutlet var fbLoginView : FBLoginView!
     
+    let seatSmartApi = SeatSmartApi()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setFieldStyles()
@@ -48,6 +50,18 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         loginPasswordField.leftViewMode = .Always
         
     }
+    
+    func handleLoginSuccess(responseData : AnyObject) {
+        
+        var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        prefs.setInteger(1, forKey: "ISLOGGEDIN")
+        
+        var jsonData = responseData as NSDictionary
+        var access_token = jsonData["access_token"] as NSString
+        prefs.setObject(access_token, forKey: "ACCESS_TOKEN")
+
+        prefs.synchronize()
+    }
 
     
     override func didReceiveMemoryWarning() {
@@ -78,12 +92,15 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         println("User Facebook Id: \(user.objectID)")
         println("Full Name: \(user.name)")
         var userEmail = user.objectForKey("email") as String
+        var tempPassword = user.objectID as String
         println("User Email: \(userEmail)")
         
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         prefs.setObject(user.name, forKey: "USERNAME")
         prefs.setInteger(1, forKey: "ISLOGGEDIN")
         prefs.synchronize()
+        
+        seatSmartApi.getAccessToken(userEmail, password: tempPassword, callback: handleLoginSuccess)
     }
     
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {

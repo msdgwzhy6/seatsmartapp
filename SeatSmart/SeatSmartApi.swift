@@ -10,7 +10,16 @@ import Foundation
 
 
 class SeatSmartApi : NSObject {
-    let oauth = OAuthApi()
+    var accessToken: String = ""
+    let httpRequest = HTTPRequest()
+    
+    override init() {
+        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if (prefs.valueForKey("ACCESS_TOKEN") != nil) {
+            accessToken = prefs.valueForKey("ACCESS_TOKEN") as String
+        }
+    }
 
     func getEventDetails(filter: NSString, callback:(result: AnyObject)->()) {
     
@@ -24,13 +33,26 @@ class SeatSmartApi : NSObject {
         }
         
         var url = SeatSmartConfig.ApiUrl + "/" + urlPath
-        self.oauth.sendGet(url, callback)
+        let requestHeaders = ["Authorization": "Bearer " + accessToken]
+        httpRequest.get(url, requestHeaders: requestHeaders, callback)
+        
     }
     
     func registerUser(fullName : String, email: String, callback: (result: AnyObject)->()) {
         
         var postData = "fullName=\(fullName)&email=\(email)"
         var url = SeatSmartConfig.ApiUrl + "/testposting.php"
-        self.oauth.sendPost(url, postData: postData, callback)
+        let requestHeaders = ["Authorization": "Bearer " + accessToken]
+        httpRequest.post(url, postData: postData, requestHeaders: requestHeaders, callback)
+    }
+    
+    func getAccessToken(username: String, password: String, callback: (result: AnyObject)->()) {
+        var postData = "grant_type=password&username=\(username)&password=\(password)" +
+            "&client_id=\(SeatSmartConfig.OAuthClientId)&client_secret=\(SeatSmartConfig.OAuthClientSecret)"
+        
+        var url = SeatSmartConfig.ApiUrl + "/token"
+        var requestHeaders : NSDictionary = Dictionary<String, String>()
+        
+        httpRequest.post(url, postData: postData, requestHeaders: requestHeaders, callback)
     }
 }

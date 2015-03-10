@@ -43,7 +43,7 @@ class EventsViewController: UITableViewController, UITableViewDelegate, UISearch
     
     func handleGetEvents(responseData : AnyObject) {
 
-        var jsonData : NSArray = responseData as NSArray
+        var jsonData = responseData as NSArray
         
         eventItems.removeAll()
         for item: AnyObject in jsonData {

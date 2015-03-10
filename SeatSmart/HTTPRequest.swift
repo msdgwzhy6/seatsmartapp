@@ -8,16 +8,20 @@
 
 import Foundation
 
-class OAuthApi : NSObject {
+class HTTPRequest : NSObject {
     
-    func sendGet(urlPath: NSString, callback: (result: AnyObject)->()) {
+    func get(urlPath: NSString, requestHeaders: NSDictionary, callback: (result: AnyObject)->()) {
         let url: NSURL = NSURL(string: urlPath)!
         let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
         var request = NSMutableURLRequest(URL: url, cachePolicy: cachePolicy, timeoutInterval: 2.0)
         request.HTTPMethod = "GET"
         
-        let encryptedLoginString = self.getEncryptedLoginString()
-        request.setValue(encryptedLoginString, forHTTPHeaderField: "Authorization")
+        
+        for (key, value) in requestHeaders {
+            let headerName = key as String
+            let headerValue = value as String
+            request.setValue(headerValue, forHTTPHeaderField: headerName)
+        }
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
@@ -25,8 +29,10 @@ class OAuthApi : NSObject {
             println("response = \(response)")
             
             var jsonError: NSError?
-            var jsonData: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError)!
-            
+            var jsonData: AnyObject = [];
+            if (data != nil) {
+                jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError)!
+            }
             println("data = \(jsonData)")
             
             callback(result: jsonData)
@@ -35,7 +41,7 @@ class OAuthApi : NSObject {
         task.resume()
     }
     
-    func sendPost(urlPath: NSString, postData: NSString, callback: (result: AnyObject)->()) {
+    func post(urlPath: NSString, postData: NSString, requestHeaders: NSDictionary, callback: (result: AnyObject)->()) {
         
         let url: NSURL = NSURL(string: urlPath)!
         let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
@@ -48,18 +54,25 @@ class OAuthApi : NSObject {
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
-        let encryptedLoginString = self.getEncryptedLoginString()
-        request.setValue(encryptedLoginString, forHTTPHeaderField: "Authorization")
+        for (key, value) in requestHeaders {
+            let headerName = key as String
+            let headerValue = value as String
+            request.setValue(headerValue, forHTTPHeaderField: headerName)
+        }
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
             
             println("response = \(response)")
             
-            var responseData = NSString(data: data, encoding: NSUTF8StringEncoding)!
-            println(responseData)
+            var jsonError: NSError?
+            var jsonData: AnyObject = [];
+            if (data != nil) {
+                jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jsonError)!
+            }
+            println("data = \(jsonData)")
             
-            callback(result: responseData)
+            callback(result: jsonData)
         }
         task.resume()
         
